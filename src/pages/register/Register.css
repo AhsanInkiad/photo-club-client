@@ -1,3 +1,22 @@
+.Lainput-match {
+  border-color: green;
+}
+
+.Lainput-match-text {
+  color: green;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.Lainput-error {
+  border-color: red;
+}
+
+.Lainput-error-text {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
 
 .Laform{
     --input-focus: #2d8cf0;
@@ -12,6 +31,9 @@
   
     justify-content: center;
     gap: 20px;
+    border-radius: 5px;
+    border: 2px solid #EAB902;
+    box-shadow: 4px 4px  #EAB902;
 
   }
   

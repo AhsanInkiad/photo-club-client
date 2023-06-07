@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './Login.css'
+
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { AuthContext } from '../../providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import Swal from 'sweetalert2';
 
 const Login = () => {
     const [err, setErr] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+
     const { user, setUser, signIn, GooglesignIn, setCount, dp } = useContext(AuthContext);
 
     const [profile, setProfile, ] = useState(null);
@@ -14,8 +18,14 @@ const Login = () => {
     // const auth = getAuth(app);
     const provider = new GoogleAuthProvider();
 
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+      };
+      
+
     const handleLogin = event => {
         event.preventDefault();
+        const passwordInputType = showPassword ? 'text' : 'password';
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
@@ -77,7 +87,9 @@ const Login = () => {
                 <form onSubmit={handleLogin} className="Laform2">
                     <div className="Latitle mx-auto  text-center"> <span className=''></span>     Welcome<br /><span>Log in to continue :</span></div>
                     <input type="email" placeholder="Email" name="email" className="Lainput" required />
-                    <input type="password" placeholder="Password" name="password" className="Lainput" required />
+                   
+                    <input type={showPassword ? 'text' : 'password'} placeholder="Password" name="password" className="Lainput" required />
+                    <button className='mx-auto text-black text-center  border w-1/7' type="button" onClick={togglePasswordVisibility}> {showPassword ? <AiFillEyeInvisible/> : <AiFillEye/> }</button>
                     <button className='mx-auto w-1/2 btn btn-xs sm:btn-sm md:btn-md lg:btn-md'>Log in</button>
                 </form>
                 <div className="-mt-2 divider bg-white w-full"></div>
