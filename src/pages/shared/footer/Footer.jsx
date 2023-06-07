@@ -1,5 +1,5 @@
 import React from 'react';
-import logo2 from '../../../assets/logo-2.jpg'
+import logo2 from '../../../assets/logo4.png'
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { BiMap } from "react-icons/bi";
 import { AiOutlinePhone, AiOutlineMail, AiFillCopyrightCircle } from "react-icons/ai";
@@ -10,12 +10,12 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div>
-        <footer className="footer p-10 bg-[#1D1F1F]  md:grid md:grid-cols-3 lg:flex justify-between">
+        <footer className="footer p-8 py-10 bg-[#1D1F1F]  md:grid md:grid-cols-3 lg:flex justify-between">
             {/* Logo and website name */}
             <div className='my-auto'>
                 <Link to='/'><div className='flex  space-x-4 btn btn-ghost  bg-[#1D1F1F] h-20 '>
                     <img className='border-4 border-[#EAB902] w-12 lg:w-16 m-auto rounded-lg' src={logo2} />
-                    <p className="text-white  normal-case text-lgg lg:text-xl"> <span className='flex align-items-center'> Fast <span className='text-[#EAB902] mt-1 ml-1'><AiOutlineThunderbolt ></AiOutlineThunderbolt></span>  </span>  <span className='text-[white]'> &</span>  Curious  </p>
+                    <p className="text-white  normal-case text-xsm md:text-lg  lg:text-xl"> <span className='flex align-items-center'>Photo Hero </span></p>
                 </div></Link>
                 <p className='mt-4'>Fast and Curious Ltd.<br />Providing reliable service since 2018.</p>
             </div>

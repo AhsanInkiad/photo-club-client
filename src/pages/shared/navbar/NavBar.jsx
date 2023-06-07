@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import logo2 from '../../../assets/logo-2.jpg'
+import logo2 from '../../../assets/logo4.png'
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { GiCarWheel } from "react-icons/gi";
 import './NavBar.css'
@@ -30,7 +30,7 @@ console.log(user?.displayName);
                 {/* Logo and website name */}
                 <Link to='/'><div className='flex space-x-4 btn btn-ghost  bg-[#1D1F1F] h-20 '>
                     <img className='border-4 border-[#EAB902] w-10 md:w-12 lg:w-16 m-auto rounded-lg' src={logo2} />
-                    <p className="text-white  normal-case text-xsm md:text-lg  lg:text-xl"> <span className='flex align-items-center'> Fast <span className='text-[#EAB902] mt-1 ml-1'><AiOutlineThunderbolt ></AiOutlineThunderbolt></span> </span>  <span className='text-[white]'> &</span>  Curious  </p>
+                    <p className="text-white  normal-case text-xsm md:text-lg  lg:text-xl"> <span className='flex align-items-center'>Photo Hero </span></p>
                 </div></Link>
 
                 {/* Dropdown */}
@@ -54,7 +54,7 @@ console.log(user?.displayName);
             <div className="navbar-center text-lg font-semibold text-white hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     <li><Link to='/' className='mr-2 btn btn-ghost'>Home</Link></li>
-                    <li><Link to='instructtors' className='mr-2 btn btn-ghost'>Instructors</Link></li>
+                    <li><Link to='instructors' className='mr-2 btn btn-ghost'>Instructors</Link></li>
                     <li><Link to="classes" className='mr-2 btn btn-ghost '>Classes</Link></li>
                     {user && <li><Link to='dashboard' className=' mr-2 btn btn-ghost'>  Dashboard</Link></li>}
                 </ul>
