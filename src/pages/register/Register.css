@@ -1,0 +1,92 @@
+
+.Laform{
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #666;
+    --bg-color: #fff;
+    --main-color: #323232;
+    padding: 20px;
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    gap: 20px;
+
+  }
+  
+  .Latitle {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 20px;
+    margin-bottom: 25px;
+  }
+  
+  .Latitle span {
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 17px;
+  }
+  
+  .Lainput {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid  #323232;
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+  
+  .Lainput::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+  
+  .Lainput:focus {
+    border: 2px solid #EAB902;
+  }
+  
+  .Lalogin-with {
+    display: flex;
+  
+  }
+  
+  .Labutton-log {
+    --font-color: #323232;
+
+    --bg-color: #fff;
+    --main-color: #323232;
+    
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    color: var(--font-color);
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .Laicon {
+    --main-color: #323232;
+    width: 24px;
+    height: 24px;
+    fill: var(--main-color);
+  }
+  
+  .Labutton-log:active, .button-confirm:active {
+    box-shadow: 0px 0px var(--main-color);
+    transform: translate(3px, 3px);
+  }
+  
+  
+  
