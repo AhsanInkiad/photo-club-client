@@ -1,5 +1,5 @@
 import React from 'react';
-import logo2 from '../../../assets/logo4.png'
+import logo2 from '../../../assets/logo-6.png'
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { BiMap } from "react-icons/bi";
 import { AiOutlinePhone, AiOutlineMail, AiFillCopyrightCircle } from "react-icons/ai";
@@ -10,27 +10,27 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div>
-        <footer className="footer p-8 py-10 bg-[#1D1F1F]  md:grid md:grid-cols-3 lg:flex justify-between">
+        <footer className="footer p-8 py-10 bg-slate-800  md:grid md:grid-cols-3 lg:flex justify-between">
             {/* Logo and website name */}
             <div className='my-auto'>
-                <Link to='/'><div className='flex  space-x-4 btn btn-ghost  bg-[#1D1F1F] h-20 '>
-                    <img className='border-4 border-[#EAB902] w-12 lg:w-16 m-auto rounded-lg' src={logo2} />
+                <Link to='/'><div className='flex  space-x-4 btn btn-ghost  bg-slate-800 h-20 '>
+                    <img className='border-4 border-[#1DA1F2] w-12 lg:w-16 m-auto rounded-lg' src={logo2} />
                     <p className="text-white  normal-case text-xsm md:text-lg  lg:text-xl"> <span className='flex align-items-center'>Photo Hero </span></p>
                 </div></Link>
-                <p className='mt-4'>Fast and Curious Ltd.<br />Providing reliable service since 2018.</p>
+                <p className='mt-4 text-white'>Fast and Curious Ltd.<br />Providing reliable service since 2018.</p>
             </div>
             {/* Contact Info */}
             <div className='my-auto'>
                 <p className=' text-white font-bold text-xl pb-2'>Contact Information :</p>
-                <p className='flex '>  <AiOutlinePhone className='mt-1 text-[#EAB902]'> </AiOutlinePhone> - 017077XXXXX - [Store-1]   </p>
-                <p className='flex '>  <AiOutlinePhone className='mt-1 text-[#EAB902]'> </AiOutlinePhone> - 016066XXXXX - [Store-2]   </p>
-                <p className='flex '>  <AiOutlineMail className='mt-1 text-[#EAB902]'> </AiOutlineMail> - fastandcurious@gmail.com   </p>
+                <p className='flex text-white'>  <AiOutlinePhone className='mt-1 text-[#1DA1F2]'> </AiOutlinePhone> - 017077XXXXX - [Store-1]   </p>
+                <p className='flex text-white'>  <AiOutlinePhone className='mt-1 text-[#1DA1F2]'> </AiOutlinePhone> - 016066XXXXX - [Store-2]   </p>
+                <p className='flex text-white'>  <AiOutlineMail className='mt-1 text-[#1DA1F2]'> </AiOutlineMail> - fastandcurious@gmail.com   </p>
             </div>
             {/* Address */}
             <div className='my-auto'>
                 <p className=' text-white font-bold md:text-lg lg:text-xl'>Address :</p>
-                <p className='flex '>  <BiMap className='mt-1 text-[#EAB902]'> </BiMap> - Gulshan-Badda, Link Road, Dhaka <br /> .. Bangladesh. [Store-1]   </p>
-                <p className='flex '>  <BiMap className='mt-1 text-[#EAB902]'> </BiMap> - Dhanmondi-32, Ar-Plaza, Dhaka <br /> .. Bangladesh. [Store-2]   </p>
+                <p className='flex text-white'>  <BiMap className='mt-1 text-[#1DA1F2]'> </BiMap> - Gulshan-Badda, Link Road, Dhaka <br /> .. Bangladesh. [Store-1]   </p>
+                <p className='flex text-white'>  <BiMap className='mt-1 text-[#1DA1F2]'> </BiMap> - Dhanmondi-32, Ar-Plaza, Dhaka <br /> .. Bangladesh. [Store-2]   </p>
             </div>
             {/* Subscribe */}
             <div className="my-auto subscribe">
@@ -63,7 +63,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
-        <div className='bg-[#1D1F1F] p-10 flex'>   
+        <div className='bg-slate-800 p-10 flex'>   
             <p className='mx-auto '> © Copyright: INKIAD </p>
         </div>
 

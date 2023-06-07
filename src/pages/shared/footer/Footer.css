@@ -153,7 +153,7 @@
     height: 0;
     border-left: 0px solid transparent;
     border-right: 10px solid transparent;
-    border-bottom: 10px solid #EAB902;
+    border-bottom: 10px solid #1DA1F2;
   }
   
   .subscribe p {
@@ -177,7 +177,7 @@
   
   .subscribe input:focus {
     outline: none;
-    border-bottom: 1px solid  #EAB902;
+    border-bottom: 1px solid  #1DA1F2;
     
   }
   
@@ -186,7 +186,7 @@
     border-radius: 30px;
     border-bottom-right-radius: 0;
     border-top-right-radius: 0;
-    background-color: #EAB902;
+    background-color: #1DA1F2;
     color: #FFF;
     padding: 12px 25px;
     display: inline-block;
@@ -201,6 +201,6 @@
   }
   
   .subscribe .submit-btn:hover {
-    background-color: #EAB902;
+    background-color: #1DA1F2;
     box-shadow: -5px 6px 20px 0px rgba(255, 255, 255, 0.569);
   }

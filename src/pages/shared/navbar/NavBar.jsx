@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import logo2 from '../../../assets/logo4.png'
+import logo2 from '../../../assets/logo-6.png'
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { GiCarWheel } from "react-icons/gi";
 import './NavBar.css'
@@ -25,11 +25,11 @@ console.log(user?.displayName);
             });
     }
     return (
-        <div className="navbar bg-[#1D1F1F] p-6">
+        <div className="navbar bg-slate-800 p-6">
             <div className="navbar-start">
                 {/* Logo and website name */}
-                <Link to='/'><div className='flex space-x-4 btn btn-ghost  bg-[#1D1F1F] h-20 '>
-                    <img className='border-4 border-[#EAB902] w-10 md:w-12 lg:w-16 m-auto rounded-lg' src={logo2} />
+                <Link to='/'><div className='flex space-x-4 btn btn-ghost  bg-slate-800 h-20 '>
+                    <img className='border-4 border-[#1DA1F2] w-10 md:w-12 lg:w-16 m-auto rounded-lg' src={logo2} />
                     <p className="text-white  normal-case text-xsm md:text-lg  lg:text-xl"> <span className='flex align-items-center'>Photo Hero </span></p>
                 </div></Link>
 
@@ -37,10 +37,10 @@ console.log(user?.displayName);
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
                         <GiCarWheel className="text-white h-6 w-6"></GiCarWheel>
-                        <svg xmlns="http://www.w3.org/2000/svg" className="text-[#EAB902] h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="text-[#1DA1F2] h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
 
                     </label>
-                    <ul tabIndex={0} className="text-white menu menu-compact dropdown-content mt-3 p-2 shadow border border-[#EAB902] bg-[#1D1F1F] rounded-box w-52">
+                    <ul tabIndex={0} className="text-white menu menu-compact dropdown-content mt-3 p-2 shadow border border-[#1DA1F2] bg-[#1D1F1F] rounded-box w-52">
                         <li><Link to='/'>Home</Link></li>
                         <li><Link to='instructors'>Instructors</Link></li>
                         <li><Link to="classes">Classes</Link> </li>
@@ -53,10 +53,10 @@ console.log(user?.displayName);
             {/* Menu in the center */}
             <div className="navbar-center text-lg font-semibold text-white hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <li><Link to='/' className='mr-2 btn btn-ghost'>Home</Link></li>
-                    <li><Link to='instructors' className='mr-2 btn btn-ghost'>Instructors</Link></li>
-                    <li><Link to="classes" className='mr-2 btn btn-ghost '>Classes</Link></li>
-                    {user && <li><Link to='dashboard' className=' mr-2 btn btn-ghost'>  Dashboard</Link></li>}
+                    <li><Link to='/' className='mr-2 pt-4 btn btn-ghost'>Home</Link></li>
+                    <li><Link to='instructors' className='mr-2 pt-4 btn btn-ghost'>Instructors</Link></li>
+                    <li><Link to="classes" className='mr-2 pt-4 btn btn-ghost '>Classes</Link></li>
+                    {user && <li><Link to='dashboard' className='pt-4 mr-2 btn btn-ghost'>  Dashboard</Link></li>}
                 </ul>
             </div>
             {/* Profile pic and login/logout button */}
