@@ -212,119 +212,148 @@ const Home = () => {
 
             { /* Popular Instructors */}
             <div className='pt-40'>
-            <p className='pb-32 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Popular Instructors</p>
-            {/* Popular Instructors card */}
-            <div className='grid px-24 justify-items-center lg:px-60 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
-                {/*card-1 */}
-                <div class="vacard-container">
-                    <div class="vacard">
-                        <div class="vafront-content">
-                            <p>Hover me</p>
-                        </div>
-                        <div class="vacontent">
-                            <p class="vaheading">Card Hover</p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipii
-                                voluptas ten mollitia pariatur odit, ab
-                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                necessitatibus dignissimos molestias.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                 {/*card-2 */}
-                 <div class="vacard-container w-1/2">
-                    <div class="vacard w-1/2">
-                        <div class="vafront-content">
-                            <p>Hover me</p>
-                        </div>
-                        <div class="vacontent">
-                            <p class="vaheading">Card Hover</p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipii
-                                voluptas ten mollitia pariatur odit, ab
-                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                necessitatibus dignissimos molestias.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                 {/*card-3 */}
-                 <div class="vacard-container">
-                    <div class="vacard">
-                        <div class="vafront-content">
-                            <p>Hover me</p>
-                        </div>
-                        <div class="vacontent">
-                            <p class="vaheading">Card Hover</p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipii
-                                voluptas ten mollitia pariatur odit, ab
-                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                necessitatibus dignissimos molestias.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <p className='pb-32 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Popular Instructors</p>
+                {/* Popular Instructors card */}
+                <div className='grid px-24 justify-items-center lg:px-60 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
+                    {/*card-1 */}
+                    <div className="vacard-container">
+                        <div className="vacard">
+                            <div className="vafront-content">
+                                <div>
+                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
+                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
+                                </div>
 
 
-                {/*card-4 */}
-                <div class="vacard-container">
-                    <div class="vacard">
-                        <div class="vafront-content">
-                            <p>Hover me</p>
-                        </div>
-                        <div class="vacontent">
-                            <p class="vaheading">Card Hover</p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipii
-                                voluptas ten mollitia pariatur odit, ab
-                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                necessitatibus dignissimos molestias.
-                            </p>
+                            </div>
+                            <div className="vacontent">
+                                <p className="vaheading">Card Hover</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipii
+                                    voluptas ten mollitia pariatur odit, ab
+                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                    necessitatibus dignissimos molestias.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                 {/*card-5 */}
-                 <div class="vacard-container w-1/2">
-                    <div class="vacard w-1/2">
-                        <div class="vafront-content">
-                            <p>Hover me</p>
-                        </div>
-                        <div class="vacontent">
-                            <p class="vaheading">Card Hover</p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipii
-                                voluptas ten mollitia pariatur odit, ab
-                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                necessitatibus dignissimos molestias.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                 {/*card-6 */}
-                 <div class="vacard-container">
-                    <div class="vacard">
-                        <div class="vafront-content">
-                            <p>Hover me</p>
-                        </div>
-                        <div class="vacontent">
-                            <p class="vaheading">Card Hover</p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipii
-                                voluptas ten mollitia pariatur odit, ab
-                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                necessitatibus dignissimos molestias.
-                            </p>
+                    {/*card-2 */}
+                    <div className="vacard-container">
+                        <div className="vacard">
+                            <div className="vafront-content">
+                                <div>
+                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
+                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
+                                </div>
+
+
+                            </div>
+                            <div className="vacontent">
+                                <p className="vaheading">Card Hover</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipii
+                                    voluptas ten mollitia pariatur odit, ab
+                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                    necessitatibus dignissimos molestias.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    {/*card-3 */}
+                    <div className="vacard-container">
+                        <div className="vacard">
+                            <div className="vafront-content">
+                                <div>
+                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
+                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
+                                </div>
+
+
+                            </div>
+                            <div className="vacontent">
+                                <p className="vaheading">Card Hover</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipii
+                                    voluptas ten mollitia pariatur odit, ab
+                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                    necessitatibus dignissimos molestias.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/*card-4 */}
+                    <div className="vacard-container">
+                        <div className="vacard">
+                            <div className="vafront-content">
+                                <div>
+                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
+                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
+                                </div>
+
+
+                            </div>
+                            <div className="vacontent">
+                                <p className="vaheading">Card Hover</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipii
+                                    voluptas ten mollitia pariatur odit, ab
+                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                    necessitatibus dignissimos molestias.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/*card-5 */}
+                    <div className="vacard-container">
+                        <div className="vacard">
+                            <div className="vafront-content">
+                                <div>
+                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
+                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
+                                </div>
+
+
+                            </div>
+                            <div className="vacontent">
+                                <p className="vaheading">Card Hover</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipii
+                                    voluptas ten mollitia pariatur odit, ab
+                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                    necessitatibus dignissimos molestias.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {/*card-6 */}
+                    <div className="vacard-container">
+                        <div className="vacard">
+                            <div className="vafront-content">
+                                <div>
+                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
+                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
+                                </div>
+
+
+                            </div>
+                            <div className="vacontent">
+                                <p className="vaheading">Card Hover</p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipii
+                                    voluptas ten mollitia pariatur odit, ab
+                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                    necessitatibus dignissimos molestias.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
 
 
 
+                </div>
             </div>
-            </div>
-           
+
 
 
             { /* Cubic design for featured photo */}

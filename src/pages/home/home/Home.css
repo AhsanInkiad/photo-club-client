@@ -247,10 +247,10 @@ Credit */
   }
   
   .vacard .vafront-content p {
-	font-size: 32px;
+
 	font-weight: 700;
 	opacity: 1;
-	background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 20%, rgba(8,29,134,1) 37%, rgba(0,212,255,1) 100%);
+	background: linear-gradient(to right, #141e30, #243b55);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
