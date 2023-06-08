@@ -7,6 +7,8 @@ import { MdOutlinePendingActions } from "react-icons/md";
 
 import { AiFillHome } from "react-icons/ai";
 
+import { BsCashCoin } from "react-icons/bs";
+
 
 
 
@@ -32,8 +34,10 @@ const Dashboard = () => {
                         {/* Sidebar content here */}
                     
                     
-                    <Link to="/dashboard/enrolledclasses">  <li className='text-white text-lg font-bold'><p><span className='text-green-400'> <BsCartCheckFill></BsCartCheckFill> </span> Enrolled Classes</p> </li> </Link>
+                   
                     <Link to="/dashboard/selectedclasses">  <li className='text-white text-lg font-bold'><p><span className='text-blue-400'><MdOutlinePendingActions></MdOutlinePendingActions> </span> Selected Classes</p></li> </Link>  
+                    <Link to="/dashboard/enrolledclasses">  <li className='text-white text-lg font-bold'><p><span className='text-green-400'> <BsCartCheckFill></BsCartCheckFill> </span> Enrolled Classes</p> </li> </Link>
+                    <Link to="/dashboard/paymenthistory">  <li className='text-white text-lg font-bold'><p><span className='text-blue-400'><BsCashCoin></BsCashCoin></span> Payment History</p></li> </Link>  
                     <div className="divider"></div> 
                     <Link to="/">  <li className='text-white text-lg font-bold'><p><span className='text-white'> <AiFillHome></AiFillHome> </span> Home</p> </li> </Link>  
                     </ul>
