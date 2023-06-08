@@ -1,0 +1,50 @@
+.wcards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .wcards .wred {
+    background-color: #1E293B ;
+  }
+  
+  .wcards .wblue {
+    background-color: #1DA1F2 ;
+  }
+  
+  .wcards .wgreen {
+    background-color: #1E293B;
+  }
+  
+  .wcards .wcard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+  }
+  
+  .wcards .wcard p.wtip {
+
+    font-weight: 700;
+  }
+  
+  .wcards .wcard p.wsecond-text {
+
+  }
+  
+  .wcards .wcard:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .wcards:hover > .wcard:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+  }

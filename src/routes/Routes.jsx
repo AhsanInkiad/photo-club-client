@@ -11,6 +11,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import EnrolledClasses from "../pages/dashboard/enrolled classes/EnrolledClasses";
 import Payment from "../pages/dashboard/payment/Payment";
 import PaymentHistory from "../pages/dashboard/payment history/PaymentHistory";
+import UserHome from "../pages/dashboard/user home/UserHome";
 
 const router = createBrowserRouter([
   {
@@ -62,6 +63,10 @@ const router = createBrowserRouter([
       {
         path: 'paymenthistory',
         element: <PaymentHistory></PaymentHistory>
+      },
+      {
+        path: 'userhome',
+        element: <UserHome></UserHome>
       }
       
     ]

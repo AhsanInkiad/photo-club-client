@@ -5,7 +5,7 @@ import { BsCartCheckFill, BsFillPersonLinesFill, BsCamera } from "react-icons/bs
 import { MdOutlinePendingActions } from "react-icons/md";
 import { AiFillHome } from "react-icons/ai";
 import { BsCashCoin } from "react-icons/bs";
-
+import './Dashboard.css';
 
 
 
@@ -20,7 +20,8 @@ const Dashboard = () => {
                 <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col items-center justify-center">
                     {/* Page content here */}
-
+                   
+                   
                     <Outlet></Outlet>
 
                     <label htmlFor="my-drawer-2" className="btn btn-sm my-10 btn-primary drawer-button lg:hidden">Open dashboard</label>
@@ -36,7 +37,7 @@ const Dashboard = () => {
                             <p className="text-white  normal-case text-xsm md:text-lg  lg:text-xl"> <span className='flex align-items-center'>Photo Hero </span></p>
                         </div></Link>
 
-                        <Link to="/dashboard">  <li className='text-white text-lg font-bold'><p><span className='text-blue-400'> <AiFillHome></AiFillHome></span> User Home</p></li> </Link>
+                        <Link to="/dashboard/userhome">  <li className='text-white text-lg font-bold'><p><span className='text-blue-400'> <AiFillHome></AiFillHome></span> User Home</p></li> </Link>
                         <Link to="/dashboard/selectedclasses">  <li className='text-white text-lg font-bold'><p><span className='text-blue-400'><MdOutlinePendingActions></MdOutlinePendingActions> </span> Selected Classes</p></li> </Link>
                         <Link to="/dashboard/enrolledclasses">  <li className='text-white text-lg font-bold'><p><span className='text-green-400'> <BsCartCheckFill></BsCartCheckFill> </span> Enrolled Classes</p> </li> </Link>
                         <Link to="/dashboard/paymenthistory">  <li className='text-white text-lg font-bold'><p><span className='text-blue-400'><BsCashCoin></BsCashCoin></span> Payment History</p></li> </Link>
