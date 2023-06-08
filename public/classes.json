@@ -1,0 +1,114 @@
+ [
+      {
+        "name": "Photography Fundamentals",
+        "image": "https://images.unsplash.com/photo-1552168324-d612d77725e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=736&q=80",
+        "instructor_name": "John Smith",
+        "instructor_email": "john@example.com",
+        "available_seats": 20,
+        "price": 99.99,
+        "total_enrolled_students": 15,
+        "brief_details": "Learn the basics of photography and improve your skills.",
+        "status": "pending"
+      },
+      {
+        "name": "Portrait Photography",
+        "image": "https://images.unsplash.com/photo-1605949257507-142fa54cfb61?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80",
+        "instructor_name": "Sarah Johnson",
+        "instructor_email": "sarah@example.com",
+        "available_seats": 10,
+        "price": 149.99,
+        "total_enrolled_students": 8,
+        "brief_details": "Discover advanced techniques for portrait photography.",
+        "status": "pending"
+      },
+      {
+        "name": "https://images.unsplash.com/photo-1613956644521-81a9cbe99a7a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "image": "course3.jpg",
+        "instructor_name": "Michael Brown",
+        "instructor_email": "michael@example.com",
+        "available_seats": 5,
+        "price": 199.99,
+        "total_enrolled_students": 5,
+        "brief_details": "Master landscape photography and capture breathtaking scenes.",
+        "status": "pending"
+      },
+      {
+        "name": "B and W Photography",
+        "image": "https://images.unsplash.com/photo-1567225948400-262665798aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+        "instructor_name": "Emily Davis",
+        "instructor_email": "emily@example.com",
+        "available_seats": 12,
+        "price": 79.99,
+        "total_enrolled_students": 10,
+        "brief_details": "Learn the art of black and white photography.",
+        "status": "pending"
+      },
+      {
+        "name": "Street's De Photography",
+        "image": "https://images.unsplash.com/photo-1647462319246-e8d9c0cfa8ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=686&q=80",
+        "instructor_name": "David Lee",
+        "instructor_email": "david@example.com",
+        "available_seats": 15,
+        "price": 129.99,
+        "total_enrolled_students": 14,
+        "brief_details": "Explore creative techniques in street photography.",
+        "status": "pending"
+      },
+      {
+        "name": "Wildlife Photography",
+        "image": "https://images.unsplash.com/photo-1596070778720-e53e8efdc46b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=765&q=80",
+        "instructor_name": "Jennifer White",
+        "instructor_email": "jennifer@example.com",
+        "available_seats": 8,
+        "price": 179.99,
+        "total_enrolled_students": 6,
+        "brief_details": "Master the art of wildlife photography in natural habitats.",
+        "status": "pending"
+      },
+      {
+        "name": "Long Exposure Techniques",
+        "image": "https://images.unsplash.com/photo-1664548039796-85bb36dcd1b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+        "instructor_name": "Robert Thompson",
+        "instructor_email": "robert@example.com",
+        "available_seats": 18,
+        "price": 89.99,
+        "total_enrolled_students": 16,
+        "brief_details": "Learn to capture stunning photos using long exposure techniques.",
+        "status": "pending"
+      },
+      {
+        "name": "Capturing Intricate Details",
+        "image": "https://images.unsplash.com/photo-1648215509424-db1b7f20041e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+        "instructor_name": "Emma Harris",
+        "instructor_email": "emma@example.com",
+        "available_seats": 10,
+        "price": 149.99,
+        "total_enrolled_students": 7,
+        "brief_details": "Discover the art of macro photography and capture intricate details.",
+        "status": "pending"
+      },
+      {
+        "name": "Aerial with Drones",
+        "image": "https://images.unsplash.com/photo-1532989029401-439615f3d4b4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80",
+        "instructor_name": "Daniel Green",
+        "instructor_email": "daniel@example.com",
+        "available_seats": 25,
+        "price": 109.99,
+        "total_enrolled_students": 20,
+        "brief_details": "Learn to capture stunning aerial photos using drones.",
+        "status": "pending"
+      },
+      {
+        "name": "Product Photography",
+        "image": "https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+        "instructor_name": "Sophia Wilson",
+        "instructor_email": "sophia@example.com",
+        "available_seats": 12,
+        "price": 129.99,
+        "total_enrolled_students": 11,
+        "brief_details": "Master the techniques of product photography for e-commerce.",
+        "status": "pending"
+      }
+]
+  
+  
