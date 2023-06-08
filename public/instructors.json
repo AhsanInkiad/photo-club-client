@@ -1,0 +1,57 @@
+[
+    {
+      "ins_name": "John Smith",
+      "ins_email": "john@example.com",
+      "c_name": "Photography Fundamentals",
+      "c_image": "https://images.unsplash.com/photo-1580428261891-cb29e9e409e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      "ins_name": "Sarah Johnson",
+      "ins_email": "sarah@example.com",
+      "c_name": "Portrait Photography",
+      "c_image": "https://images.unsplash.com/photo-1612972619421-f14037e20900?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      "ins_name": "Emily Davis",
+      "ins_email": "emily@example.com",
+      "c_name": "B and W Photography",
+      "c_image": "https://images.unsplash.com/photo-1605405400344-fbde1d54e9af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      "ins_name": "David Lee",
+      "ins_email": "david@example.com",
+      "c_name": "Street's De Photography",
+      "c_image": "https://images.unsplash.com/photo-1550937428-659d277973ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=671&q=80"
+    },
+    {
+      "ins_name": "Jennifer White",
+      "ins_email": "jennifer@example.com",
+      "c_name": "Wildlife Photography",
+      "c_image": "https://images.unsplash.com/photo-1597226229094-22c49bf2ee62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      "ins_name": "Robert Thompson",
+      "ins_email": "robert@example.com",
+      "c_name": "Long Exposure Techniques",
+      "c_image": "https://images.unsplash.com/photo-1539090521412-7af9bbc1110b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      "ins_name": "Emma Harris",
+      "ins_email": "emma@example.com",
+      "c_name": "Capturing Intricate Details",
+      "c_image": "https://images.unsplash.com/photo-1605211052948-00d92fd6b7c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=740&q=80"
+    },
+    {
+      "ins_name": "Daniel Green",
+      "ins_email": "daniel@example.com",
+      "c_name": "Aerial with Drones",
+      "c_image": "https://images.unsplash.com/photo-1605656817116-f9aa270ff4f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+    },
+    {
+      "ins_name": "Sophia Wilson",
+      "ins_email": "sophia@example.com",
+      "c_name": "Product Photography",
+      "c_image": "https://images.unsplash.com/photo-1526094114998-bbde692632d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+    }
+  ]
+  

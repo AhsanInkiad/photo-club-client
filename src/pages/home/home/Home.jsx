@@ -11,8 +11,8 @@ const Home = () => {
     useEffect(() => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
-            .then(data => setTabs(data))
-            setSortedTabs([...tabs].sort((a, b) => b.total_enrolled_students - a.total_enrolled_students));
+            .then(data => setTabs(data.sort((a, b) => b.total_enrolled_students - a.total_enrolled_students)))
+            
     }, [])
 
 
@@ -85,7 +85,7 @@ const Home = () => {
                 <div className='mx-auto grid grid-cols-1 w-3/4  justify-items-center lg:grid-cols-3 gap-10 px-10 lg:px-28'>
                     {/* Card-1 */}
                     {
-                        sortedTabs.slice(0,6).map((tab) => (
+                        tabs.slice(0,6).map((tab) => (
                             <div>
                                 <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                                     <div>
