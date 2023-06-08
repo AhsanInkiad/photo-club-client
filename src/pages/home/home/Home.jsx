@@ -1,10 +1,13 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Home.css'
 
 const Home = () => {
     useEffect(() => {
         document.title = "PhotoHero | Home";
     }, []);
+
+
+
     return (
 
         <div className='bg-white'>
@@ -69,10 +72,10 @@ const Home = () => {
             <div className='pt-40'>
                 <p className='pb-10 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Popular Classes</p>
                 {/* Popular classes card */}
-                <div className='grid grid-cols-1 lg:grid-cols-3 gap-6 px-10 lg:px-40'>
+                <div className='mx-auto grid grid-cols-1 w-3/4  justify-items-center lg:grid-cols-3 gap-10 px-10 lg:px-28'>
                     {/* Card-1 */}
                     <div>
-                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl">
+                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                             <div>
                                 <img className="pt-10 mx-auto rounded-xl w-1/2 hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
                             </div>
@@ -81,7 +84,7 @@ const Home = () => {
                                 <h2 className="card-title mx-auto font-bold text-2xl">Wedding</h2>
                                 <p className="text-center text-slate-600 font-semibold">Wedding Photography</p>
                                 <div className='pt-5 text-center'>
-                                    <p className='text-[#1DA1F2] text-3xl font-bold'>1000</p>
+                                    <p className="text-[#1DA1F2] text-3xl font-bold">1000</p>
                                     <p className="text-center text-slate-600 font-semibold">Student Enrolled</p>
 
                                 </div>
@@ -93,7 +96,7 @@ const Home = () => {
                     </div>
                     {/* Card-2 */}
                     <div>
-                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl">
+                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                             <div>
                                 <img className="pt-10 mx-auto rounded-xl w-1/2 hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
                             </div>
@@ -114,7 +117,7 @@ const Home = () => {
                     </div>
                     {/* Card-3 */}
                     <div>
-                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl">
+                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                             <div>
                                 <img className="pt-10 mx-auto rounded-xl w-1/2 hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
                             </div>
@@ -137,7 +140,7 @@ const Home = () => {
 
                     {/* Card-4 */}
                     <div>
-                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl">
+                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                             <div>
                                 <img className="pt-10 mx-auto rounded-xl w-1/2 hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
                             </div>
@@ -158,7 +161,7 @@ const Home = () => {
                     </div>
                     {/* Card-5 */}
                     <div>
-                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl">
+                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                             <div>
                                 <img className="pt-10 mx-auto rounded-xl w-1/2 hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
                             </div>
@@ -179,7 +182,7 @@ const Home = () => {
                     </div>
                     {/* Card-6 */}
                     <div>
-                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl">
+                        <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                             <div>
                                 <img className="pt-10 mx-auto rounded-xl w-1/2 hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
                             </div>
@@ -208,17 +211,121 @@ const Home = () => {
 
 
             { /* Popular Instructors */}
-            <div className='pt-40'></div>
-            <p className='pb-10 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Popular Instructors</p>
+            <div className='pt-40'>
+            <p className='pb-32 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Popular Instructors</p>
             {/* Popular Instructors card */}
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-4'>
+            <div className='grid px-24 justify-items-center lg:px-60 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
                 {/*card-1 */}
+                <div class="vacard-container">
+                    <div class="vacard">
+                        <div class="vafront-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="vacontent">
+                            <p class="vaheading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 {/*card-2 */}
+                 <div class="vacard-container w-1/2">
+                    <div class="vacard w-1/2">
+                        <div class="vafront-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="vacontent">
+                            <p class="vaheading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 {/*card-3 */}
+                 <div class="vacard-container">
+                    <div class="vacard">
+                        <div class="vafront-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="vacontent">
+                            <p class="vaheading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
+
+                {/*card-4 */}
+                <div class="vacard-container">
+                    <div class="vacard">
+                        <div class="vafront-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="vacontent">
+                            <p class="vaheading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 {/*card-5 */}
+                 <div class="vacard-container w-1/2">
+                    <div class="vacard w-1/2">
+                        <div class="vafront-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="vacontent">
+                            <p class="vaheading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                 {/*card-6 */}
+                 <div class="vacard-container">
+                    <div class="vacard">
+                        <div class="vafront-content">
+                            <p>Hover me</p>
+                        </div>
+                        <div class="vacontent">
+                            <p class="vaheading">Card Hover</p>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipii
+                                voluptas ten mollitia pariatur odit, ab
+                                minus ratione adipisci accusamus vel est excepturi laboriosam magnam
+                                necessitatibus dignissimos molestias.
+                            </p>
+                        </div>
+                    </div>
+                </div>
 
 
 
             </div>
-            
+            </div>
+           
+
 
             { /* Cubic design for featured photo */}
             <div className='bod pb-40 pt-10'>
