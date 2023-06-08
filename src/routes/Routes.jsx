@@ -12,6 +12,10 @@ import EnrolledClasses from "../pages/dashboard/enrolled classes/EnrolledClasses
 import Payment from "../pages/dashboard/payment/Payment";
 import PaymentHistory from "../pages/dashboard/payment history/PaymentHistory";
 import UserHome from "../pages/dashboard/user home/UserHome";
+import Idashboard from "../pages/i_dashboard/Idashboard";
+import MyClasses from "../pages/i_dashboard/my classes/MyClasses";
+import AddClass from "../pages/i_dashboard/Add Class/AddClass";
+import IUserHome from "../pages/i_dashboard/i user home/IUserHome";
 
 const router = createBrowserRouter([
   {
@@ -67,6 +71,29 @@ const router = createBrowserRouter([
       {
         path: 'userhome',
         element: <UserHome></UserHome>
+      }
+      
+    ]
+  },
+
+
+  {
+
+    path: 'idashboard',
+    element: <Idashboard></Idashboard>,
+    children: [
+      {
+        path: 'myclasses',
+        element: <PrivateRoutes><MyClasses></MyClasses></PrivateRoutes>
+      },
+      {
+        path: 'addclass',
+        element: <AddClass></AddClass>
+      },
+      
+      {
+        path: 'iuserhome',
+        element: <IUserHome></IUserHome>
       }
       
     ]
