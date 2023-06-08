@@ -31,7 +31,7 @@ const Home = () => {
                 <div className="carousel mx-auto  border-4 rounded-xl border-[#1E293B]">
                     <div id="slide1" className="carousel-item relative w-full">
 
-                        <img src="https://i.ibb.co/m8TRr4w/jake-espedido-ugk-B-S2-O5s-unsplash.jpg" className="w-full brightness-50" />
+                        <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" className="w-full brightness-50" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide4" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide2" className="btn btn-circle btn-xs md:btn-sm">❯</a>
@@ -43,7 +43,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div id="slide2" className="carousel-item relative w-full">
-                        <img src="https://i.ibb.co/QQ1SSvV/jake-espedido-KTb8-UQ-Qd5w-unsplash.jpg" className="w-full brightness-50" />
+                        <img src="https://images.unsplash.com/photo-1542567455-cd733f23fbb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" className="w-full brightness-50" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide1" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide3" className="btn btn-circle btn-xs md:btn-sm">❯</a>
@@ -55,7 +55,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div id="slide3" className="carousel-item relative w-full">
-                        <img src="https://i.ibb.co/m8TRr4w/jake-espedido-ugk-B-S2-O5s-unsplash.jpg" className="w-full brightness-50" />
+                        <img src="https://images.unsplash.com/photo-1506241537529-eefea1fbe44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" className="w-full brightness-50" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide2" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide4" className="btn btn-circle btn-xs md:btn-sm">❯</a>
@@ -67,7 +67,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div id="slide4" className="carousel-item relative w-full">
-                        <img src="https://i.ibb.co/QQ1SSvV/jake-espedido-KTb8-UQ-Qd5w-unsplash.jpg" className="w-full brightness-50" />
+                        <img src="https://images.unsplash.com/photo-1531860995303-e732ee6bdb1f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" className="w-full brightness-50" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                             <a href="#slide3" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide1" className="btn btn-circle btn-xs md:btn-sm">❯</a>
@@ -105,7 +105,7 @@ const Home = () => {
                                             <p className="text-center text-slate-600 font-semibold text-sm">Enrolled Students</p>
                                         </div>
                                         <div className="card-actions justify-center">
-                                            <Link to="/selectedclasses"> <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">Select</button></Link>
+                                            <Link to="/dashboard/selectedclasses"> <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">Select</button></Link>
                                         </div>
                                     </div>
                                 </div>

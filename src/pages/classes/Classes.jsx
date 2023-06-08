@@ -6,6 +6,7 @@ const Classes = () => {
     useEffect(() => {
         document.title = "PhotoHero | Classes";
       }, []);
+      
       const [tabs, setTabs] = useState([]);
       useEffect(() => {
           fetch('http://localhost:5000/classes')
@@ -41,7 +42,7 @@ const Classes = () => {
                                     <p className="text-center text-slate-600 font-semibold text-sm">Seats Available</p>
                                 </div>
                                 <div className="card-actions justify-center">
-                                    <Link to="/selectedclasses"> <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">Select</button></Link>
+                                    <Link to="/dashboard/selectedclasses"> <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">Select</button></Link>
                                 </div>
                             </div>
                         </div>
