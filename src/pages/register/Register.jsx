@@ -88,7 +88,7 @@ const Register = () => {
                 {!passwordMatch && <p className="Lainput-error-text">Passwords did not match</p>}
                 {passwordMatch && <p className="Lainput-match-text">Password matched</p>}
                 <input type="text" placeholder="Photo URL" name="photo" className="Lainput" required />
-                <button className='mx-auto w-1/2 btn btn-xs sm:btn-sm md:btn-md lg:btn-md btn-outline btn-warning '> <span className='text-black'>Register</span> </button>
+                <button className='mx-auto w-1/2 btn btn-xs sm:btn-sm md:btn-md lg:btn-md btn-outline btn-info '> <span className='text-black'>Register</span> </button>
 
 
                 <div className="-mt-6 font-semibold text-[#666] mx-auto   text-center"> <br /><span className='text-sm'>Already have an account? : <Link to='/login'> <u className=' hover:text-blue-500 text-md font-bold'>Log in</u></Link> </span></div>

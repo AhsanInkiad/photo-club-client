@@ -32,8 +32,8 @@
     justify-content: center;
     gap: 20px;
     border-radius: 5px;
-    border: 2px solid #EAB902;
-    box-shadow: 4px 4px  #EAB902;
+    border: 2px solid #1DA1F2;
+    box-shadow: 4px 4px #1DA1F2;
 
   }
   
@@ -70,7 +70,7 @@
   }
   
   .Lainput:focus {
-    border: 2px solid #EAB902;
+    border: 2px solid #1DA1F2;
   }
   
   .Lalogin-with {

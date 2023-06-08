@@ -5,9 +5,9 @@ const Dashboard = () => {
         document.title = "PhotoHero | Dashboard";
       }, []);
     return (
-        <div>
-            <p>This is the dashboard</p>
-        </div>
+        <div className="dashboard">
+       <p>this is dashboard</p>
+      </div>
     );
 };
 

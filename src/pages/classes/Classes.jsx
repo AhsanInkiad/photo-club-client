@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Classes = () => {
     useEffect(() => {
@@ -26,7 +27,7 @@ const Classes = () => {
                                     <p className="text-center text-slate-600 font-semibold text-sm">Seats Available</p>
                                 </div>
                                 <div className="card-actions justify-center">
-                                    <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">Select</button>
+                                    <Link to="/selectedclasses"> <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">Select</button></Link>
                                 </div>
                             </div>
                         </div>
