@@ -1,20 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css'
 import { Link } from 'react-router-dom';
+import { AiFillMail } from "react-icons/ai";
 
 const Home = () => {
     useEffect(() => {
         document.title = "PhotoHero | Home";
     }, []);
     const [tabs, setTabs] = useState([]);
-    const [sortedTabs, setSortedTabs] = useState([]);
+    const [instabs, setInstabs] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => setTabs(data.sort((a, b) => b.total_enrolled_students - a.total_enrolled_students)))
             
     }, [])
-
+      useEffect(() => {
+          fetch('http://localhost:5000/instructors')
+              .then(res => res.json())
+              .then(data => setInstabs(data))
+      }, [])
 
     console.log(tabs);
 
@@ -79,7 +84,7 @@ const Home = () => {
 
 
             { /* Popular Classes */}
-            <div className='pt-40'>
+            <div className='pt-40 '>
                 <p className='pb-10 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Popular Classes</p>
                 {/* Popular classes card */}
                 <div className='mx-auto grid grid-cols-1 w-3/4  justify-items-center lg:grid-cols-3 gap-10 px-10 lg:px-28'>
@@ -120,143 +125,37 @@ const Home = () => {
 
 
             { /* Popular Instructors */}
-            <div className='pt-40'>
+            <div className='pt-40 pb-36'>
                 <p className='pb-32 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Popular Instructors</p>
                 {/* Popular Instructors card */}
                 <div className='grid px-24 justify-items-center lg:px-60 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
                     {/*card-1 */}
-                    <div className="vacard-container">
+                    {
+                     instabs.slice(0,6).map((tab) => (
+                        <div className="vacard-container">
                         <div className="vacard">
                             <div className="vafront-content">
                                 <div>
-                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
-                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
+                                    <img className="px-5 h-40 w-48 rounded-lg hover:scale-110 transition duration-300" src={tab.c_image} />
+                                    <p className='text-center text-lg pt-4'>{tab.ins_name}</p>
                                 </div>
 
 
                             </div>
                             <div className="vacontent">
-                                <p className="vaheading">Card Hover</p>
+                                <p className="vaheading text-sm leading-10 pt-8 "> {tab.c_name}</p>
                                 <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipii
-                                    voluptas ten mollitia pariatur odit, ab
-                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                    necessitatibus dignissimos molestias.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    {/*card-2 */}
-                    <div className="vacard-container">
-                        <div className="vacard">
-                            <div className="vafront-content">
-                                <div>
-                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
-                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
-                                </div>
-
-
-                            </div>
-                            <div className="vacontent">
-                                <p className="vaheading">Card Hover</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipii
-                                    voluptas ten mollitia pariatur odit, ab
-                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                    necessitatibus dignissimos molestias.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    {/*card-3 */}
-                    <div className="vacard-container">
-                        <div className="vacard">
-                            <div className="vafront-content">
-                                <div>
-                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
-                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
-                                </div>
-
-
-                            </div>
-                            <div className="vacontent">
-                                <p className="vaheading">Card Hover</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipii
-                                    voluptas ten mollitia pariatur odit, ab
-                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                    necessitatibus dignissimos molestias.
+                                <AiFillMail className='inline'></AiFillMail>:  
+                                    {tab.ins_email}
                                 </p>
                             </div>
                         </div>
                     </div>
 
-                    {/*card-4 */}
-                    <div className="vacard-container">
-                        <div className="vacard">
-                            <div className="vafront-content">
-                                <div>
-                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
-                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
-                                </div>
+                    ))
 
-
-                            </div>
-                            <div className="vacontent">
-                                <p className="vaheading">Card Hover</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipii
-                                    voluptas ten mollitia pariatur odit, ab
-                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                    necessitatibus dignissimos molestias.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    {/*card-5 */}
-                    <div className="vacard-container">
-                        <div className="vacard">
-                            <div className="vafront-content">
-                                <div>
-                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
-                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
-                                </div>
-
-
-                            </div>
-                            <div className="vacontent">
-                                <p className="vaheading">Card Hover</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipii
-                                    voluptas ten mollitia pariatur odit, ab
-                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                    necessitatibus dignissimos molestias.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    {/*card-6 */}
-                    <div className="vacard-container">
-                        <div className="vacard">
-                            <div className="vafront-content">
-                                <div>
-                                    <img className="px-5 rounded-lg hover:scale-110 transition duration-300" src="https://i.ibb.co/7QQrXdc/cristiano-ronaldo-4k-hd-pc-download-wallpaper-preview.jpg" />
-                                    <p className='text-center text-lg pt-4'>Sir Krishna Ronaldo</p>
-                                </div>
-
-
-                            </div>
-                            <div className="vacontent">
-                                <p className="vaheading">Card Hover</p>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipii
-                                    voluptas ten mollitia pariatur odit, ab
-                                    minus ratione adipisci accusamus vel est excepturi laboriosam magnam
-                                    necessitatibus dignissimos molestias.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                   }
+                 
 
 
 
@@ -268,7 +167,7 @@ const Home = () => {
             { /* Cubic design for featured photo */}
             <div className='bod pb-40 pt-10'>
                 <div className="btitle">
-                    <h1 className='text-black font-semibold text-2xl' >Our Featured Photo:</h1>
+                <p className='pb-10 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Our Digital Arts:</p>
 
                 </div>
                 <div className="bslider pt-20 pb-20">
