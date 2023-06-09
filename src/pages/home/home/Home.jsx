@@ -1,25 +1,28 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Home.css'
 import { Link } from 'react-router-dom';
 import { AiFillMail } from "react-icons/ai";
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Home = () => {
+
     useEffect(() => {
         document.title = "PhotoHero | Home";
     }, []);
+    const { setCount, count } = useContext(AuthContext);
     const [tabs, setTabs] = useState([]);
     const [instabs, setInstabs] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => setTabs(data.sort((a, b) => b.total_enrolled_students - a.total_enrolled_students)))
-            
+
     }, [])
-      useEffect(() => {
-          fetch('http://localhost:5000/instructors')
-              .then(res => res.json())
-              .then(data => setInstabs(data))
-      }, [])
+    useEffect(() => {
+        fetch('http://localhost:5000/instructors')
+            .then(res => res.json())
+            .then(data => setInstabs(data))
+    }, [])
 
     console.log(tabs);
 
@@ -90,7 +93,7 @@ const Home = () => {
                 <div className='mx-auto grid grid-cols-1 w-3/4  justify-items-center lg:grid-cols-3 gap-10 px-10 lg:px-28'>
                     {/* Card-1 */}
                     {
-                        tabs.slice(0,6).map((tab) => (
+                        tabs.slice(0, 6).map((tab) => (
                             <div>
                                 <div className="card bg-white border-2 border-[#1E293B] shadow-xl hover:scale-110 transition duration-300">
                                     <div>
@@ -105,7 +108,15 @@ const Home = () => {
                                             <p className="text-center text-slate-600 font-semibold text-sm">Enrolled Students</p>
                                         </div>
                                         <div className="card-actions justify-center">
-                                            <Link to="/dashboard/selectedclasses"> <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">Select</button></Link>
+                                            {count ? (
+                                                <></>
+                                            ) : (
+                                                <Link to="/dashboard/selectedclasses">
+                                                    <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">
+                                                        Select
+                                                    </button>
+                                                </Link>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
@@ -131,31 +142,31 @@ const Home = () => {
                 <div className='grid px-24 justify-items-center lg:px-60 grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-10'>
                     {/*card-1 */}
                     {
-                     instabs.slice(0,6).map((tab) => (
-                        <div className="vacard-container">
-                        <div className="vacard">
-                            <div className="vafront-content">
-                                <div>
-                                    <img className="px-5 h-40 w-48 rounded-lg hover:scale-110 transition duration-300" src={tab.c_image} />
-                                    <p className='text-center text-lg pt-4'>{tab.ins_name}</p>
+                        instabs.slice(0, 6).map((tab) => (
+                            <div className="vacard-container">
+                                <div className="vacard">
+                                    <div className="vafront-content">
+                                        <div>
+                                            <img className="px-5 h-40 w-48 rounded-lg hover:scale-110 transition duration-300" src={tab.c_image} />
+                                            <p className='text-center text-lg pt-4'>{tab.ins_name}</p>
+                                        </div>
+
+
+                                    </div>
+                                    <div className="vacontent">
+                                        <p className="vaheading text-sm leading-10 pt-8 "> {tab.c_name}</p>
+                                        <p>
+                                            <AiFillMail className='inline'></AiFillMail>:
+                                            {tab.ins_email}
+                                        </p>
+                                    </div>
                                 </div>
-
-
                             </div>
-                            <div className="vacontent">
-                                <p className="vaheading text-sm leading-10 pt-8 "> {tab.c_name}</p>
-                                <p>
-                                <AiFillMail className='inline'></AiFillMail>:  
-                                    {tab.ins_email}
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
-                    ))
+                        ))
 
-                   }
-                 
+                    }
+
 
 
 
@@ -167,7 +178,7 @@ const Home = () => {
             { /* Cubic design for featured photo */}
             <div className='bod pb-40 pt-10'>
                 <div className="btitle">
-                <p className='pb-10 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Our Digital Arts:</p>
+                    <p className='pb-10 text-black text-center text-2xl font-semibold lg:text-4xl lg:font-bold'>Our Digital Arts:</p>
 
                 </div>
                 <div className="bslider pt-20 pb-20">

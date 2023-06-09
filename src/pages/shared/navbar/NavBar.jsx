@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import logo2 from '../../../assets/logo-6.png'
 import { AiOutlineThunderbolt } from "react-icons/ai";
 import { GiCarWheel } from "react-icons/gi";
@@ -6,18 +6,54 @@ import './NavBar.css'
 import { getAuth, signOut } from 'firebase/auth';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../../providers/AuthProvider';
+import { useQuery } from '@tanstack/react-query';
 const NavBar = () => {
     const auth = getAuth();
     const { user, setUser, setLoading, setCount, count, dp, setDp } = useContext(AuthContext);
-console.log(user?.photoURL);
-console.log(user?.displayName);
+    const [fusers, setFusers] = useState([]);
+    const { data: users = [], refetch } = useQuery(['users'], async () => {
+        const res = await fetch('http://localhost:5000/users')
+        return res.json();
+    })
+    useEffect(() => {
+        setFusers(users?.filter((userItem) => userItem.email === user?.email));
+     
+    }, [users]);
+
+    console.log(fusers[0]?.role);
+    // TODO: load data from the server to have dynamic isAdmin based on Data
+    let isStudent = false;
+    let isInstructor = false;
+    let isAdmin = false;
+    let isDisabled = false;
+    if(fusers[0]?.role=='admin'){
+        isAdmin = true;
+        setCount(true);
+    } 
+    else if(fusers[0]?.role=='instructor'){
+        isInstructor = true;
+        setCount(true);
+
+    }
+    else{
+        isStudent = true;
+        setCount(false);
+    }
+
+ 
+
+
+
+
+    console.log(user?.photoURL);
+    console.log(user?.displayName);
     const handleLogOut = (event) => {
         setLoading(true);
         signOut(auth)
             .then(() => {
                 // Sign-out successful.
                 setUser(null);
-                setCount(null);
+                
 
             })
             .catch((error) => {
@@ -45,7 +81,7 @@ console.log(user?.displayName);
                         <li><Link to='instructors'>Instructors</Link></li>
                         <li><Link to="classes">Classes</Link> </li>
                         {user && <li><Link to='dashboard/userhome'>Dashboard</Link></li>}
-                        
+
 
                     </ul>
                 </div>
@@ -56,9 +92,9 @@ console.log(user?.displayName);
                     <li><Link to='/' className='mr-2 pt-4 btn btn-ghost'>Home</Link></li>
                     <li><Link to='instructors' className='mr-2 pt-4 btn btn-ghost'>Instructors</Link></li>
                     <li><Link to="classes" className='mr-2 pt-4 btn btn-ghost '>Classes</Link></li>
-                    {user && <li><Link to='dashboard/userhome' className='pt-4 mr-2 btn btn-ghost'>  Dashboard</Link></li>}
-                    {user && <li><Link to='idashboard/iuserhome' className='pt-4 mr-2 btn btn-ghost'>  i_Dashboard</Link></li>}
-                    {user && <li><Link to='adashboard/auserhome' className='pt-4 mr-2 btn btn-ghost'>  a_Dashboard</Link></li>}
+                    {isStudent && <li><Link to='dashboard/userhome' className='pt-4 mr-2 btn btn-ghost'>  Dashboard</Link></li>}
+                    {isInstructor && <li><Link to='idashboard/iuserhome' className='pt-4 mr-2 btn btn-ghost'>  i_Dashboard</Link></li>}
+                    {isAdmin && <li><Link to='adashboard/auserhome' className='pt-4 mr-2 btn btn-ghost'>  a_Dashboard</Link></li>}
                 </ul>
             </div>
             {/* Profile pic and login/logout button */}

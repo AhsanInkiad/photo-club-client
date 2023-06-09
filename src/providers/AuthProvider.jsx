@@ -10,7 +10,7 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [count, setCount] = useState(null);
+    const [count, setCount] = useState(false);
     const [dp, setDp] = useState(null);
     const [picId, setPicId] = useState(null);
     const [fpicId, fsetPicId] = useState(null);

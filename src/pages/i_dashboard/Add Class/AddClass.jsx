@@ -1,11 +1,61 @@
 import React, { useContext, useEffect } from 'react';
 import './AddClass.css';
 import { AuthContext } from '../../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 const AddClass = () => {
     useEffect(() => {
         document.title = "Photo Hero | Add Class";
     }, []);
     const { user } = useContext(AuthContext);
+    const handleAddClass = event => {
+        event.preventDefault();
+
+        const form = event.target;
+
+        const cName = form.pic_URL.value;
+        const cImg = form.class_name.value;
+        const iName = form.ins_name.value;
+        const iEmail = form.ins_email.value;
+        const aSeats = form.available_seats.value;
+        const cPrice = form.course_price.value;
+        const cStatus = form.status.value;
+        const tEnroll = form.total_enroll.value;
+        const bDescription = form.brief_description.value;
+
+
+        const addedClass = {
+            name: cName,
+            image: cImg,
+            instructor_name: iName,
+            instructor_email: iEmail,
+            available_seats: aSeats,
+            price: cPrice,
+            total_enrolled_students: tEnroll,
+            brief_details: bDescription,
+            status: cStatus
+        }
+
+        console.log(addedClass);
+        fetch('http://localhost:5000/addaclass', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addedClass)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire(
+                        'Good job!',
+                        'Your toy has been added!',
+                        'success'
+                    )
+                }
+            })
+
+    }
     return (
         <div>
 
@@ -15,7 +65,7 @@ const AddClass = () => {
                         <h1 className="text-5xl font-bold text-white">Add a class!</h1>
                         <p className="py-6">You can see your added class in MY Classes page!</p>
                     </div>
-                    <form className="card  flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <form onSubmit={handleAddClass} className="card  flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <div className="card-body ">
                             <div className=' lg:grid lg:grid-cols-2 lg:gap-6'>
                                 {/* Class name */}
@@ -84,35 +134,35 @@ const AddClass = () => {
                                     <input type="text" placeholder="" disabled defaultValue={"pending"} name="status" className="input input-bordered" />
                                 </div>
 
-                                 {/* Total enrolled students */}
+                                {/* Total enrolled students */}
+                                <div className="form-control">
+                                    <label className="label">
+                                        <span className="text-white font-semibold">Total Enrollment</span>
+                                    </label>
+                                    <input type="text" placeholder="" disabled defaultValue={0} name="total_enroll" className="input input-bordered" />
+                                </div>
+                            </div>
+
+
+
+
+
+                            {/* Brief details */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="text-white font-semibold">Total Enrollment</span>
+                                    <span className="text-white font-semibold">Brief Details</span>
                                 </label>
-                                <input type="text" placeholder="" disabled defaultValue={0} name="status" className="input input-bordered" />
+                                <input type="text" placeholder="description" name="brief_description" className="input text-white input-bordered" />
                             </div>
+
+                            <div className="form-control mt-6">
+                                <input className="btn btn-outline btn-info" type="submit" value="Add" />
                             </div>
-                           
-                        
-
-
-
-                        {/* Brief details */}
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="text-white font-semibold">Brief Details</span>
-                            </label>
-                            <input type="text" placeholder="description" name="brief_description" className="input text-white input-bordered" />
                         </div>
-
-                        <div className="form-control mt-6">
-                            <input className="btn btn-outline btn-info" type="submit" value="Add" />
-                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
+            </div >
         </div >
-    </div >
     );
 };
 
