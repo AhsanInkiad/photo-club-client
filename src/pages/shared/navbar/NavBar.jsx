@@ -58,7 +58,7 @@ console.log(user?.displayName);
                     <li><Link to="classes" className='mr-2 pt-4 btn btn-ghost '>Classes</Link></li>
                     {user && <li><Link to='dashboard/userhome' className='pt-4 mr-2 btn btn-ghost'>  Dashboard</Link></li>}
                     {user && <li><Link to='idashboard/iuserhome' className='pt-4 mr-2 btn btn-ghost'>  i_Dashboard</Link></li>}
-
+                    {user && <li><Link to='adashboard/auserhome' className='pt-4 mr-2 btn btn-ghost'>  a_Dashboard</Link></li>}
                 </ul>
             </div>
             {/* Profile pic and login/logout button */}

@@ -16,6 +16,10 @@ import Idashboard from "../pages/i_dashboard/Idashboard";
 import MyClasses from "../pages/i_dashboard/my classes/MyClasses";
 import AddClass from "../pages/i_dashboard/Add Class/AddClass";
 import IUserHome from "../pages/i_dashboard/i user home/IUserHome";
+import Adashboard from "../pages/a_dashboard/Adashboard";
+import ManageClasses from "../pages/a_dashboard/Manage Classes/ManageClasses";
+import ManageUsers from "../pages/a_dashboard/Manage Users/ManageUsers";
+import AUserHome from "../pages/a_dashboard/a user home/AUserHome";
 
 const router = createBrowserRouter([
   {
@@ -94,6 +98,28 @@ const router = createBrowserRouter([
       {
         path: 'iuserhome',
         element: <IUserHome></IUserHome>
+      }
+      
+    ]
+  },
+
+  {
+
+    path: 'adashboard',
+    element: <Adashboard></Adashboard>,
+    children: [
+      {
+        path: 'manageclasses',
+        element: <PrivateRoutes><ManageClasses></ManageClasses></PrivateRoutes>
+      },
+      {
+        path: 'manageusers',
+        element: <PrivateRoutes><ManageUsers></ManageUsers></PrivateRoutes>
+      },
+      
+      {
+        path: 'auserhome',
+        element: <PrivateRoutes><AUserHome></AUserHome></PrivateRoutes>
       }
       
     ]

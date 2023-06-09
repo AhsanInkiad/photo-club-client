@@ -21,17 +21,17 @@ const AddClass = () => {
                                 {/* Class name */}
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="text-white">Class Name</span>
+                                        <span className="text-white font-semibold">Class Name</span>
                                     </label>
-                                    <input type="text" placeholder="class name" name="class_name" className="input input-bordered" />
+                                    <input type="text" placeholder="class name" name="class_name" className="text-white input input-bordered" />
                                 </div>
 
                                 {/* Pic url */}
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="text-white">Picture URL</span>
+                                        <span className="text-white font-semibold">Picture URL</span>
                                     </label>
-                                    <input type="text" placeholder="picture URL" name="pic_URL" className="input input-bordered" />
+                                    <input type="text" placeholder="picture URL" name="pic_URL" className="text-white input input-bordered" />
                                 </div>
 
                             </div>
@@ -40,18 +40,18 @@ const AddClass = () => {
                             {/* Instructor name */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="text-white">Instructor Name</span>
+                                    <span className="text-white font-semibold">Instructor Name</span>
                                 </label>
-                                <input type="text" placeholder="instructor name" defaultValue={user.displayName} name="ins_name" className="input input-bordered" />
+                                <input type="text" placeholder="instructor name" defaultValue={user.displayName} name="ins_name" className="text-white input input-bordered" />
                             </div>
 
 
                             {/* Instructor email */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="text-white">Instructor Email</span>
+                                    <span className="text-white font-semibold">Instructor Email</span>
                                 </label>
-                                <input type="text" placeholder="instructor email" defaultValue={user.email} name="ins_email" className="input input-bordered" />
+                                <input type="text" placeholder="instructor email" defaultValue={user.email} name="ins_email" className="text-white input input-bordered" />
                             </div>
 
                             <div className='lg:grid lg:grid-cols-2 lg:gap-6'>
@@ -59,18 +59,18 @@ const AddClass = () => {
                                 {/* Available Seats */}
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="text-white">Available seats</span>
+                                        <span className="text-white font-semibold">Available seats</span>
                                     </label>
-                                    <input type="text" placeholder="available seats" name="available_seats" className="input input-bordered" />
+                                    <input type="text" placeholder="available seats" name="available_seats" className="text-white input input-bordered" />
                                 </div>
 
 
                                 {/* Price */}
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="text-white">Price</span>
+                                        <span className="text-white font-semibold">Price</span>
                                     </label>
-                                    <input type="text" placeholder="price" name="course_price" className="input input-bordered" />
+                                    <input type="text" placeholder="price" name="course_price" className="text-white input input-bordered" />
                                 </div>
 
                             </div>
@@ -79,7 +79,7 @@ const AddClass = () => {
                                 {/* Status */}
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="text-white">Status</span>
+                                        <span className="text-white font-semibold">Status</span>
                                     </label>
                                     <input type="text" placeholder="" disabled defaultValue={"pending"} name="status" className="input input-bordered" />
                                 </div>
@@ -87,7 +87,7 @@ const AddClass = () => {
                                  {/* Total enrolled students */}
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="text-white">Total Enrollment</span>
+                                    <span className="text-white font-semibold">Total Enrollment</span>
                                 </label>
                                 <input type="text" placeholder="" disabled defaultValue={0} name="status" className="input input-bordered" />
                             </div>
@@ -100,13 +100,13 @@ const AddClass = () => {
                         {/* Brief details */}
                         <div className="form-control">
                             <label className="label">
-                                <span className="text-white">Brief Details</span>
+                                <span className="text-white font-semibold">Brief Details</span>
                             </label>
-                            <input type="text" placeholder="description" name="brief_description" className="input input-bordered" />
+                            <input type="text" placeholder="description" name="brief_description" className="input text-white input-bordered" />
                         </div>
 
                         <div className="form-control mt-6">
-                            <input className="btn btn-primary" type="submit" value="Add" />
+                            <input className="btn btn-outline btn-info" type="submit" value="Add" />
                         </div>
                 </div>
             </form>
