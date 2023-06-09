@@ -11,9 +11,9 @@ const AddClass = () => {
         event.preventDefault();
 
         const form = event.target;
-
-        const cName = form.pic_URL.value;
-        const cImg = form.class_name.value;
+       
+        const cName = form.class_name.value;
+        const cImg =  form.pic_URL.value;
         const iName = form.ins_name.value;
         const iEmail = form.ins_email.value;
         const aSeats = form.available_seats.value;
@@ -111,7 +111,7 @@ const AddClass = () => {
                                     <label className="label">
                                         <span className="text-white font-semibold">Available seats</span>
                                     </label>
-                                    <input type="text" placeholder="available seats" name="available_seats" className="text-white input input-bordered" />
+                                    <input type="number" placeholder="available seats" name="available_seats" className="text-white input input-bordered" />
                                 </div>
 
 
@@ -139,7 +139,7 @@ const AddClass = () => {
                                     <label className="label">
                                         <span className="text-white font-semibold">Total Enrollment</span>
                                     </label>
-                                    <input type="text" placeholder="" disabled defaultValue={0} name="total_enroll" className="input input-bordered" />
+                                    <input type="number" placeholder="" disabled defaultValue={0} name="total_enroll" className="input input-bordered" />
                                 </div>
                             </div>
 

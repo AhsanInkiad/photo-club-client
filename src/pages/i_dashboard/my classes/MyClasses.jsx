@@ -1,7 +1,38 @@
-import React from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './MyClasses.css';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const MyClasses = () => {
+    const { user } = useContext((AuthContext));
+    const [data, setData] = useState([]);
+
+    const url = `http://localhost:5000/addClasses?insEmail=${user.email}`;
+    useEffect(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => { setData(data) })
+    }, [])
+    console.log(data);
+    const getStatusTextColor = (status) => {
+        if (status === 'pending') {
+            return 'text-yellow-400';
+        } else if (status === 'approved') {
+            return 'text-green-400';
+        } else if (status === 'denied') {
+            return 'text-red-400';
+        } else {
+            return 'text-black';
+        }
+    };
+
+    const isFeedback = (status) => {
+        return status === 'denied';
+    };
+
+    const noFeedback = (status) => {
+        return status === 'approved' || status=== 'pending';
+    };
+
     return (
         <div>
             <div>
@@ -22,31 +53,37 @@ const MyClasses = () => {
                         <tbody>
                             {/* row 1 */}
 
-                            <tr>
+                            {
+                                data.map((tab) => (
+                                    <tr>
 
-                                <td className=''>
-                                    <div className="flex items-center space-x-3">
-                                        <div className="avatar">
-                                            <div className="mask mask-squircle w-32 h-32">
-                                                <img src="https://images.unsplash.com/photo-1580428261891-cb29e9e409e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" />
+                                        <td className=''>
+                                            <div className="flex items-center space-x-3">
+                                                <div className="avatar">
+                                                    <div className="mask mask-squircle w-32 h-32">
+                                                        <img src={tab.image} />
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <div className="text-black font-semibold">{tab.name}</div>
+
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div>
-                                            <div className="text-black font-semibold">asdasd</div>
-
-                                        </div>
-                                    </div>
-                                </td>
-                                <td className='text-black text-center font-semibold'>
-                                    dddd
-                                </td>
-                                <td className='text-black text-center font-semibold'>qqwssqd</td>
-                                <td className='text-white text-center font-semibold'>
-                                    <textarea className="w-full h-20 px-2 py-1 border border-gray-300 rounded" placeholder="Enter feedback"></textarea>
-                                </td>
+                                        </td>
+                                        {/* Status */}
+                                        <td className={`text-center text-lg font-semibold ${getStatusTextColor(tab.status)}`}>
+                                            {tab.status}
+                                        </td>
+                                        {/* Total Enrolled */}
+                                        <td className='text-black text-center font-semibold'>{tab.total_enrolled_students}</td>
+                                        {/* Feedback */}
+                                        {isFeedback(tab.status) && <td className="text-white text-center font-semibold"></td> }
+                                        {noFeedback(tab.status) && <td className="text-black text-center font-semibold "> You will see feedback only <br/> if status is <span className='text-red-400'>denied!</span>  </td> }
 
 
-                            </tr>
+                                    </tr>
+                                ))
+                            }
 
 
 
