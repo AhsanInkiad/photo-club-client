@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 
 import { GrUserAdmin } from "react-icons/gr";
 import './ManageUsers.css'
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
+import { AuthContext } from '../../../providers/AuthProvider';
 const ManageUsers = () => {
-
+    const { user } = useContext(AuthContext);
     const [status, setStatus] = useState("Student");
     // tanstack query
     const { data: users = [], refetch } = useQuery(['users'], async () => {
@@ -57,6 +58,22 @@ const ManageUsers = () => {
                     })
                 }
             })
+            const saveInstructor = { ins_name: tab.name, ins_email: tab.email, c_name:tab.name, c_image: tab.photo };
+            fetch('http://localhost:5000/addainstructor', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(saveInstructor)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log("not posted ins");
+                    if (data.insertedId) {
+                        console.log("posted");
+                    }
+                })
+        
     }
     return (
         <div>

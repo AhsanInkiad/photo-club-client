@@ -17,8 +17,8 @@ const NavBar = () => {
     })
     useEffect(() => {
         setFusers(users?.filter((userItem) => userItem.email === user?.email));
-     
-    }, [users]);
+        refetch()
+    }, []);
 
     console.log(fusers[0]?.role);
     // TODO: load data from the server to have dynamic isAdmin based on Data
@@ -92,9 +92,9 @@ const NavBar = () => {
                     <li><Link to='/' className='mr-2 pt-4 btn btn-ghost'>Home</Link></li>
                     <li><Link to='instructors' className='mr-2 pt-4 btn btn-ghost'>Instructors</Link></li>
                     <li><Link to="classes" className='mr-2 pt-4 btn btn-ghost '>Classes</Link></li>
-                    {isStudent && <li><Link to='dashboard/userhome' className='pt-4 mr-2 btn btn-ghost'>  Dashboard</Link></li>}
-                    {isInstructor && <li><Link to='idashboard/iuserhome' className='pt-4 mr-2 btn btn-ghost'>  i_Dashboard</Link></li>}
-                    {isAdmin && <li><Link to='adashboard/auserhome' className='pt-4 mr-2 btn btn-ghost'>  a_Dashboard</Link></li>}
+                    {user && isStudent && <li><Link to='dashboard/userhome' className='pt-4 mr-2 btn btn-ghost'>  Dashboard</Link></li>}
+                    {user && isInstructor && <li><Link to='idashboard/iuserhome' className='pt-4 mr-2 btn btn-ghost'>  i_Dashboard</Link></li>}
+                    {user && isAdmin && <li><Link to='adashboard/auserhome' className='pt-4 mr-2 btn btn-ghost'>  a_Dashboard</Link></li>}
                 </ul>
             </div>
             {/* Profile pic and login/logout button */}

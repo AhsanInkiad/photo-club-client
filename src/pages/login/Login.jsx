@@ -37,7 +37,7 @@ const Login = () => {
                 const loggedUser = result.user;
                 Swal.fire(
                     'Good job!',
-                    'Your toy has been added!',
+                    'Your are logged in!',
                     'success'
                   )
                 setUser(loggedUser);

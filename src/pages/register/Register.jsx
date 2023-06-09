@@ -59,7 +59,7 @@ const Register = () => {
                 const createdUser = result.user;
                 Swal.fire(
                     'Good job!',
-                    'Your toy has been added!',
+                    'Your registration is done!',
                     'success'
                 )
                 console.log(createdUser);
