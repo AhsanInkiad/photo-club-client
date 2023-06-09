@@ -16,10 +16,11 @@ const NavBar = () => {
         return res.json();
     })
     useEffect(() => {
-        setFusers(users?.filter((userItem) => userItem.email === user?.email));
-        refetch()
-    }, []);
-
+        if (users && users.length > 0) {
+          setFusers(users?.filter((userItem) => userItem.email === user?.email));
+        }
+      }, [users, user]);
+ 
     console.log(fusers[0]?.role);
     // TODO: load data from the server to have dynamic isAdmin based on Data
     let isStudent = false;
