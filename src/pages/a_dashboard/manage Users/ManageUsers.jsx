@@ -42,7 +42,7 @@ const ManageUsers = () => {
                             <td className='text-black text-center font-semibold'>dfgdfg</td>
 
                             <th>
-                          <button className="btn btn-outline btn-info">Make Instructor</button>
+                          <button className="btn  btn-outline btn-info">Make Instructor</button>
                             </th>
                             <th>
                                 <button className="btn btn-outline btn-error">Make Admin</button>

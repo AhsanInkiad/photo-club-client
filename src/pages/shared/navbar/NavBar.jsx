@@ -25,7 +25,7 @@ console.log(user?.displayName);
             });
     }
     return (
-        <div className="navbar bg-slate-800 p-6">
+        <div className="navbar bg-slate-800 p-6 s">
             <div className="navbar-start">
                 {/* Logo and website name */}
                 <Link to='/'><div className='flex space-x-4 btn btn-ghost  bg-slate-800 h-20 '>

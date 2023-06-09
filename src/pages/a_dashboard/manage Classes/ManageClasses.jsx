@@ -17,7 +17,9 @@ const ManageClasses = () => {
                             <th className='text-lg text-center'>Available Seats</th>
 
                             <th className='text-lg text-center'>Price</th>
-                            <th className='text-lg text-center'> Pay</th>
+                            <th className='text-lg text-center'>Status</th>
+                          
+                            <th className='text-lg text-center'> Decision</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -45,7 +47,8 @@ const ManageClasses = () => {
                             <td className='text-black text-center font-semibold'>dfgdfg</td>
 
                             <td className='text-black text-center font-semibold'>$23</td>
-                            <th className='grid grid-cols-1 gap-2'>
+                            <td className='text-black text-center font-semibold'>Pending</td>
+                            <th className='grid grid-cols-1 gap-2 pt-5'>
                                  <button className="btn btn-sm  btn-outline btn-success">Approve</button>
                                  <button className="btn btn-sm  btn-outline btn-error">Deny</button>
                                  <button className="btn btn-sm  btn-outline text-black">Feedback</button>
