@@ -58,3 +58,13 @@
    .Nabutton:active .Naicon svg {
     transform: scale(0.8);
    }
+
+
+   .zoom-image {
+    transition: transform 0.3s ease;
+  }
+  
+  .hovered-row .zoom-image {
+    transform: scale(1.1); /* Increase the scale factor as desired */
+  }
+  
