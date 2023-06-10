@@ -14,6 +14,8 @@ const AuthProvider = ({ children }) => {
     const [dp, setDp] = useState(null);
     const [picId, setPicId] = useState(null);
     const [fpicId, fsetPicId] = useState(null);
+    const [totalClass, setTotalClass] = useState(null);
+    const [totalSelectedClass, setTotalSelectedClass] = useState(null);
     
 
     const createUser = (email, password, photos) => {
@@ -57,7 +59,11 @@ const AuthProvider = ({ children }) => {
         picId, 
         setPicId,
         fpicId, 
-        fsetPicId
+        fsetPicId,
+        totalClass, 
+        setTotalClass,
+        totalSelectedClass, 
+        setTotalSelectedClass
     }
 
     return (

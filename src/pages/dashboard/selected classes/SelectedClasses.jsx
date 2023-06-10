@@ -6,7 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 
 const SelectedClasses = () => {
-    const { user } = useContext((AuthContext));
+    const { user, totalSelectedClass, setTotalSelectedClass } = useContext((AuthContext));
     const [data, setData] = useState([]);
     const [hoveredRow, setHoveredRow] = useState(null);
     const url = `http://localhost:5000/sClasses?userEmail=${user.email}`;
@@ -18,6 +18,7 @@ const SelectedClasses = () => {
     })
     console.log('tanstack er data niche:')
     console.log(sClasses);
+    setTotalSelectedClass(sClasses.length)
     const handleRowHover = (index) => {
         setHoveredRow(index);
     };

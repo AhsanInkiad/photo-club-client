@@ -9,7 +9,7 @@ const Classes = () => {
         document.title = "PhotoHero | Classes";
     }, []);
 
-    const { setCount, count, user } = useContext(AuthContext);
+    const { setCount, count, user, totalClass, setTotalClass } = useContext(AuthContext);
     const [tabs, setTabs] = useState([]);
 
     useEffect(() => {
@@ -19,6 +19,7 @@ const Classes = () => {
     }, []);
 
     console.log(tabs);
+    setTotalClass(tabs.length);
 
     const handleSelect = (tab) => {
         const selectedClass = {

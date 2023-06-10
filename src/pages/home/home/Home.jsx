@@ -84,7 +84,7 @@ const Home = () => {
                             <a href="#slide4" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide2" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
-                        <div className=" border rounded-xl border-black p-5 lg:p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                        <div className=" border rounded-xl border-black p-5 lg:p-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
                             <p className='text-white lg:text-4xl pb-8 font-bold'>Capture Life's Brilliance with Nikon Cameras</p>
                             <p className='font-semibold pb-2'>Experience Unparalleled Photography with Nikon's Cutting-edge Technology</p>
 
@@ -96,7 +96,7 @@ const Home = () => {
                             <a href="#slide1" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide3" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
-                        <div className=" border rounded-xl border-black p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                        <div className=" border rounded-xl border-black p-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
                             <p className='text-white lg:text-4xl pb-8 font-bold'>Unleash the Power of Portraits with Our Photography Tips and Techniques</p>
                             <p className='font-semibold pb-2'>Master the Art of Portraiture and Capture Timeless Moments </p>
                         </div>
@@ -107,7 +107,7 @@ const Home = () => {
                             <a href="#slide2" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide4" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
-                        <div className=" border rounded-xl border-black p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                        <div className=" border rounded-xl border-black p-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
                             <p className='text-white lg:text-4xl pb-8 font-bold'>Unleash the Power of Portraits with Our Photography Tips and Techniques</p>
                             <p className='font-semibold pb-2'>Master the Art of Portraiture and Capture Timeless Moments </p>
                         </div>
@@ -118,7 +118,7 @@ const Home = () => {
                             <a href="#slide3" className="btn btn-circle btn-xs md:btn-sm">❮</a>
                             <a href="#slide1" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
-                        <div className=" border rounded-xl border-black p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
+                        <div className=" border rounded-xl border-black p-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
                             <p className='text-white lg:text-4xl pb-8 font-bold'>Unleash Your Inner Photographer with Canon: Ignite Your Passion for Photography</p>
                             <p className='font-semibold pb-2'>Capture Life's Precious Moments in Stunning Detail with Our Cutting-edge Canon Cameras</p>
                         </div>
