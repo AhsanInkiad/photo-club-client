@@ -3,21 +3,24 @@ import './Home.css'
 import { Link } from 'react-router-dom';
 import { AiFillMail } from "react-icons/ai";
 import { AuthContext } from '../../../providers/AuthProvider';
+import Swal from 'sweetalert2';
 
 const Home = () => {
 
     useEffect(() => {
         document.title = "PhotoHero | Home";
     }, []);
-    const { setCount, count } = useContext(AuthContext);
+    const { setCount, count, user } = useContext(AuthContext);
     const [tabs, setTabs] = useState([]);
     const [instabs, setInstabs] = useState([]);
+    
     useEffect(() => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => setTabs(data.sort((a, b) => b.total_enrolled_students - a.total_enrolled_students)))
 
     }, [])
+    
     useEffect(() => {
         fetch('http://localhost:5000/instructors')
             .then(res => res.json())
@@ -25,6 +28,48 @@ const Home = () => {
     }, [])
 
     console.log(tabs);
+
+    const handleSelect = (tab) => {
+        const selectedClass = {
+            userName: user.displayName,
+            userEmail: user.email,
+            name: tab.name,
+            image: tab.image,
+            instructor_name: tab.instructor_name,
+            instructor_email: tab.instructor_email,
+            price: tab.price,
+        }
+
+        console.log(selectedClass);
+        fetch('http://localhost:5000/selectedclass', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(selectedClass)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.message) {
+                    // Show the message to the user
+                    console.log(data.message);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'You have already selected this class!',
+                        footer: '<a href="/dashboard/selectedclasses">Go to selected Classes</a>'
+                      })
+                  } 
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire(
+                        'Done!',
+                        'Class selected.',
+                        'success'
+                    );
+                }
+            });
+    };
 
     return (
 
@@ -40,9 +85,9 @@ const Home = () => {
                             <a href="#slide2" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
                         <div className=" border rounded-xl border-black p-5 lg:p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                            <p className='text-white lg:text-6xl font-bold'>Text for slide 1</p>
-                            <p>Info</p>
-                            <p>Msg</p>
+                            <p className='text-white lg:text-4xl pb-8 font-bold'>Capture Life's Brilliance with Nikon Cameras</p>
+                            <p className='font-semibold pb-2'>Experience Unparalleled Photography with Nikon's Cutting-edge Technology</p>
+
                         </div>
                     </div>
                     <div id="slide2" className="carousel-item relative w-full">
@@ -52,9 +97,8 @@ const Home = () => {
                             <a href="#slide3" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
                         <div className=" border rounded-xl border-black p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                            <p className='text-white text-6xl font-bold'>Text for slide 1</p>
-                            <p>Info</p>
-                            <p>Msg</p>
+                            <p className='text-white lg:text-4xl pb-8 font-bold'>Unleash the Power of Portraits with Our Photography Tips and Techniques</p>
+                            <p className='font-semibold pb-2'>Master the Art of Portraiture and Capture Timeless Moments </p>
                         </div>
                     </div>
                     <div id="slide3" className="carousel-item relative w-full">
@@ -64,9 +108,8 @@ const Home = () => {
                             <a href="#slide4" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
                         <div className=" border rounded-xl border-black p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                            <p className='text-white text-6xl font-bold'>Text for slide 1</p>
-                            <p>Info</p>
-                            <p>Msg</p>
+                            <p className='text-white lg:text-4xl pb-8 font-bold'>Unleash the Power of Portraits with Our Photography Tips and Techniques</p>
+                            <p className='font-semibold pb-2'>Master the Art of Portraiture and Capture Timeless Moments </p>
                         </div>
                     </div>
                     <div id="slide4" className="carousel-item relative w-full">
@@ -76,9 +119,8 @@ const Home = () => {
                             <a href="#slide1" className="btn btn-circle btn-xs md:btn-sm">❯</a>
                         </div>
                         <div className=" border rounded-xl border-black p-20 absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-                            <p className='text-white text-6xl font-bold'>Text for slide 1</p>
-                            <p>Info</p>
-                            <p>Msg</p>
+                            <p className='text-white lg:text-4xl pb-8 font-bold'>Unleash Your Inner Photographer with Canon: Ignite Your Passion for Photography</p>
+                            <p className='font-semibold pb-2'>Capture Life's Precious Moments in Stunning Detail with Our Cutting-edge Canon Cameras</p>
                         </div>
                     </div>
                 </div>
@@ -111,11 +153,11 @@ const Home = () => {
                                             {count ? (
                                                 <></>
                                             ) : (
-                                                <Link to="/dashboard/selectedclasses">
-                                                    <button className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">
+                                            
+                                                    <button onClick={() => handleSelect(tab)} className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">
                                                         Select
                                                     </button>
-                                                </Link>
+                                              
                                             )}
                                         </div>
                                     </div>

@@ -41,6 +41,16 @@ const Classes = () => {
         })
             .then(res => res.json())
             .then(data => {
+                if (data.message) {
+                    // Show the message to the user
+                    console.log(data.message);
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: 'You have already selected this class!',
+                        footer: '<a href="/dashboard/selectedclasses">Go to selected Classes</a>'
+                      })
+                  } 
                 console.log(data);
                 if (data.insertedId) {
                     Swal.fire(
