@@ -77,7 +77,7 @@ const MyClasses = () => {
                                         {/* Total Enrolled */}
                                         <td className='text-black text-center font-semibold'>{tab.total_enrolled_students}</td>
                                         {/* Feedback */}
-                                        {isFeedback(tab.status) && <td className="text-white text-center font-semibold"></td> }
+                                        {isFeedback(tab.status) && <td className="text-red-600 text-center font-bold">{tab.feedback}</td> }
                                         {noFeedback(tab.status) && <td className="text-black text-center font-semibold "> You will see feedback only <br/> if status is <span className='text-red-400'>denied!</span>  </td> }
 
 
