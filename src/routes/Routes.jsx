@@ -20,6 +20,7 @@ import Adashboard from "../pages/a_dashboard/Adashboard";
 import ManageClasses from "../pages/a_dashboard/Manage Classes/ManageClasses";
 import ManageUsers from "../pages/a_dashboard/Manage Users/ManageUsers";
 import AUserHome from "../pages/a_dashboard/a user home/AUserHome";
+import NotFound from "../not found/NotFound";
 
 const router = createBrowserRouter([
   {
@@ -123,6 +124,10 @@ const router = createBrowserRouter([
       }
       
     ]
+  },
+  {
+    path: '*',
+    element: <NotFound></NotFound>
   }
 ]);
 
