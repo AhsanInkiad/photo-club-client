@@ -4,9 +4,15 @@ import './selectedclasses.css'
 import { AuthContext } from '../../../providers/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
+import { IoIosCard } from "react-icons/io";
 
 const SelectedClasses = () => {
-    const { user, totalSelectedClass, setTotalSelectedClass } = useContext((AuthContext));
+    const { user,setPayprice, paycourse, setPaaycorse, setPayid,  totalSelectedClass, setTotalSelectedClass,paycoursePic, 
+        setPaaycorsePic,
+        paycourseInsName, 
+        setPaaycorseInsName,
+        paycourseInsEmail, 
+        setPaaycorseInsEmail } = useContext((AuthContext));
     const [data, setData] = useState([]);
     const [hoveredRow, setHoveredRow] = useState(null);
     const url = `http://localhost:5000/sClasses?userEmail=${user.email}`;
@@ -16,9 +22,15 @@ const SelectedClasses = () => {
         const res = await fetch(url)
         return res.json();
     })
+
+
     console.log('tanstack er data niche:')
     console.log(sClasses);
     setTotalSelectedClass(sClasses.length)
+
+
+
+
     const handleRowHover = (index) => {
         setHoveredRow(index);
     };
@@ -54,6 +66,15 @@ const SelectedClasses = () => {
             }
         })
 }
+
+    const handlePay = tab => {
+        setPayid(tab._id);
+        setPayprice(tab.price);
+        setPaaycorse(tab.name);
+        setPaaycorsePic(tab.image);
+        setPaaycorseInsEmail(tab.instructor_email);
+        setPaaycorseInsName(tab.instructor_name);
+    }
 
 
     return (
@@ -109,7 +130,7 @@ const SelectedClasses = () => {
                                             <button onClick={() => handleDelete(tab._id)} className=" Nabutton Nanoselect"><span className="Natext">Delete</span><span className="Naicon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"></path></svg></span></button>
                                         </th>
                                         <th>
-                                            <Link to='/dashboard/payment'> <button className="btn btn-outline btn-info">Make Payment</button></Link>
+                                            <Link to='/dashboard/payment'> <button onClick={()=>handlePay(tab)} className="btn btn-outline btn-info"><IoIosCard></IoIosCard></button></Link>
 
                                         </th>
                                     </tr>

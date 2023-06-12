@@ -16,7 +16,13 @@ const AuthProvider = ({ children }) => {
     const [fpicId, fsetPicId] = useState(null);
     const [totalClass, setTotalClass] = useState(null);
     const [totalSelectedClass, setTotalSelectedClass] = useState(null);
-    
+    const [payprice, setPayprice] = useState(null);
+    const [payid, setPayid] = useState(null); 
+    const [paycourse, setPaaycorse] = useState(null); 
+    const [paycoursePic, setPaaycorsePic] = useState(null);
+    const [paycourseInsName, setPaaycorseInsName] = useState(null);
+    const [paycourseInsEmail, setPaaycorseInsEmail] = useState(null);   
+    const [totalEnrolled, setTotalEnrolled] = useState(null); 
 
     const createUser = (email, password, photos) => {
         setLoading(true);
@@ -63,7 +69,22 @@ const AuthProvider = ({ children }) => {
         totalClass, 
         setTotalClass,
         totalSelectedClass, 
-        setTotalSelectedClass
+        setTotalSelectedClass,
+        payid, 
+        setPayid,
+        payprice, 
+        setPayprice,
+        paycourse, 
+        setPaaycorse,
+
+        paycoursePic, 
+        setPaaycorsePic,
+        paycourseInsName, 
+        setPaaycorseInsName,
+        paycourseInsEmail, 
+        setPaaycorseInsEmail,
+        totalEnrolled, 
+        setTotalEnrolled
     }
 
     return (

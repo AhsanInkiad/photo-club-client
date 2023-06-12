@@ -6,6 +6,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import Swal from 'sweetalert2';
 
 const Home = () => {
+    const [theme, setTheme] = useState('dark');
 
     useEffect(() => {
         document.title = "PhotoHero | Home";
@@ -13,14 +14,14 @@ const Home = () => {
     const { setCount, count, user } = useContext(AuthContext);
     const [tabs, setTabs] = useState([]);
     const [instabs, setInstabs] = useState([]);
-    
+
     useEffect(() => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
             .then(data => setTabs(data.sort((a, b) => b.total_enrolled_students - a.total_enrolled_students)))
 
     }, [])
-    
+
     useEffect(() => {
         fetch('http://localhost:5000/instructors')
             .then(res => res.json())
@@ -58,8 +59,8 @@ const Home = () => {
                         title: 'Oops...',
                         text: 'You have already selected this class!',
                         footer: '<a href="/dashboard/selectedclasses">Go to selected Classes</a>'
-                      })
-                  } 
+                    })
+                }
                 console.log(data);
                 if (data.insertedId) {
                     Swal.fire(
@@ -71,11 +72,25 @@ const Home = () => {
             });
     };
 
+    const toggleTheme = () => {
+        setTheme(theme => (theme === 'light' ? 'dark' : 'light'));
+        console.log(theme);
+    };
+
+
+
     return (
 
-        <div className='bg-white'>
+        <div className={`${theme}`}>
+
+            <div className='pt-40'>
+                <div onClick={toggleTheme} className=" mx-auto  rwrapper">
+                    <input type="checkbox" name="checkbox" className="rswitch" />
+
+                </div>
+            </div>
             {/* Slider/Carousel */}
-            <div className='mx-auto w-6/7 md:w-3/4 pt-40 lg:pt-40 px-20'>
+            <div className='mx-auto w-6/7 md:w-3/4 pt-40 lg:pt-5 px-20'>
                 <div className="carousel mx-auto  border-4 rounded-xl border-[#1E293B]">
                     <div id="slide1" className="carousel-item relative w-full">
 
@@ -153,11 +168,11 @@ const Home = () => {
                                             {count ? (
                                                 <></>
                                             ) : (
-                                            
-                                                    <button onClick={() => handleSelect(tab)} className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">
-                                                        Select
-                                                    </button>
-                                              
+
+                                                <button onClick={() => handleSelect(tab)} className="mt-1 lg:mt-5 btn btn-outline btn-info btn-xs sm:btn-sm md:btn-md lg:btn-lg font-bold">
+                                                    Select
+                                                </button>
+
                                             )}
                                         </div>
                                     </div>
@@ -233,6 +248,10 @@ const Home = () => {
                 </div>
 
             </div>
+
+
+
+
         </div>
     );
 };

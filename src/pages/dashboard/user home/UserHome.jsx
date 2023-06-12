@@ -4,7 +4,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 
 const UserHome = () => {
-    const { user, totalClass, setTotalClass, setTotalSelectedClass, totalSelectedClass } = useContext(AuthContext);
+    const { user, totalClass, setTotalClass, setTotalSelectedClass, totalSelectedClass,setTotalEnrolled, totalEnrolled } = useContext(AuthContext);
     const [tabs, setTabs] = useState([]);
     const [s, setS] = useState(null);
 
@@ -30,6 +30,16 @@ const UserHome = () => {
     })
     setTotalSelectedClass(sClasses.length)
     setTotalClass(tabs.length);
+    const purl = `http://localhost:5000/mypayment?userEmail=${user.email}`;
+ // tanstack query
+ const { data: pays = [], refetchu } = useQuery(['pays'], async () => {
+    const res = await fetch(purl)
+    return res.json();
+})
+
+console.log('length',pays.length)
+setTotalEnrolled(pays.length);
+
 
     return (
         <>
@@ -55,7 +65,7 @@ const UserHome = () => {
                             </div>
                             <div className="wcard wblue">
                                 <p className="wtip text-lg">Total Enrolled Classes:</p>
-                                <p className="wsecond-text text-2xl font-bold">10</p>
+                                <p className="wsecond-text text-2xl font-bold">{totalEnrolled}</p>
                             </div>
 
                         </div>

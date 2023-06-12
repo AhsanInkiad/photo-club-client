@@ -12,6 +12,7 @@ const Classes = () => {
     const { setCount, count, user, totalClass, setTotalClass } = useContext(AuthContext);
     const [tabs, setTabs] = useState([]);
 
+    // Loading all classes
     useEffect(() => {
         fetch('http://localhost:5000/classes')
             .then(res => res.json())
@@ -33,6 +34,9 @@ const Classes = () => {
         }
 
         console.log(selectedClass);
+
+        // Creating instances in the database
+
         fetch('http://localhost:5000/selectedclass', {
             method: 'POST',
             headers: {
