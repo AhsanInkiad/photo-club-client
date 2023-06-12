@@ -7,7 +7,7 @@ const Instructors = () => {
       }, []);
       const [tabs, setTabs] = useState([]);
       useEffect(() => {
-          fetch('http://localhost:5000/instructors')
+          fetch('https://photo-club-server-ahsaninkiad.vercel.app/instructors')
               .then(res => res.json())
               .then(data => setTabs(data))
       }, [])

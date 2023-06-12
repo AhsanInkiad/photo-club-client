@@ -5,7 +5,7 @@ import Swal from 'sweetalert2';
 
 const ManageClasses = () => {
     const { data: users = [], refetch } = useQuery(['classes'], async () => {
-        const res = await fetch('http://localhost:5000/classes')
+        const res = await fetch('https://photo-club-server-ahsaninkiad.vercel.app/classes')
         return res.json();
     });
 
@@ -17,7 +17,7 @@ const ManageClasses = () => {
     };
 
     const handleApprove = (tab) => {
-        fetch(`http://localhost:5000/classes/aprove/${tab._id}`, {
+        fetch(`https://photo-club-server-ahsaninkiad.vercel.app/classes/aprove/${tab._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -40,7 +40,7 @@ const ManageClasses = () => {
     }
 
     const handleDeny = (tab) => {
-        fetch(`http://localhost:5000/classes/deny/${tab._id}`, {
+        fetch(`https://photo-club-server-ahsaninkiad.vercel.app/classes/deny/${tab._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -68,7 +68,7 @@ const ManageClasses = () => {
         console.log(text);
         console.log(selectedTab);
 
-        fetch(`http://localhost:5000/feedbacks/${selectedTab._id}`, {
+        fetch(`https://photo-club-server-ahsaninkiad.vercel.app/feedbacks/${selectedTab._id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

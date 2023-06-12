@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 
 const PaymentHistory = () => {
     const { user } = useContext((AuthContext));
-    const url = `http://localhost:5000/paymenthistory?email=${user.email}`;
+    const url = `https://photo-club-server-ahsaninkiad.vercel.app/paymenthistory?email=${user.email}`;
 
     // tanstack query
     const { data: payh = [], refetch } = useQuery(['payh'], async () => {

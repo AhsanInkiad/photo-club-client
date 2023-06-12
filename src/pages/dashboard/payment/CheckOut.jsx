@@ -15,7 +15,7 @@ const CheckOut = ({ price, payid, paycourse, paycoursePic, paycourseInsName, pay
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
         if (price > 0) {
-            fetch("http://localhost:5000/create-payment-intent", {
+            fetch("https://photo-club-server-ahsaninkiad.vercel.app/create-payment-intent", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ price }),
@@ -108,7 +108,7 @@ const CheckOut = ({ price, payid, paycourse, paycoursePic, paycourseInsName, pay
 
             // Creating instances in the database
 
-            fetch('http://localhost:5000/payment', {
+            fetch('https://photo-club-server-ahsaninkiad.vercel.app/payment', {
                 method: 'POST',
                 headers: {
                     'content-type': 'application/json'
@@ -121,7 +121,7 @@ const CheckOut = ({ price, payid, paycourse, paycoursePic, paycourseInsName, pay
                     console.log(data);
                     if (data.insertedId) {
                         // TODO
-                        fetch(`http://localhost:5000/del/${payid}`, {
+                        fetch(`https://photo-club-server-ahsaninkiad.vercel.app/del/${payid}`, {
                             method: 'DELETE'
                         })
                             .then(res => res.json())

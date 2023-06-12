@@ -69,7 +69,7 @@ const Register = () => {
                 setDp(photo);
                 setErr('');
                 const saveUser = { name: name, email: email, photo: photo };
-                fetch('http://localhost:5000/users', {
+                fetch('https://photo-club-server-ahsaninkiad.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'
@@ -110,7 +110,7 @@ const Register = () => {
                 
                 setUser(Guser);
                 const saveUser = { name: Guser.displayName, email: Guser.email, photo: Guser.photoURL };
-                fetch('http://localhost:5000/users', {
+                fetch('https://photo-club-server-ahsaninkiad.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': 'application/json'

@@ -9,19 +9,19 @@ const UserHome = () => {
     const [s, setS] = useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://photo-club-server-ahsaninkiad.vercel.app/classes')
             .then(res => res.json())
             .then(data => setTabs(data))
     }, []);
 
     const { data: sUsers = [], refetc } = useQuery(['users'], async () => {
-        const res = await fetch(`http://localhost:5000/sUsers?userEmail=${user.email}`)
+        const res = await fetch(`https://photo-club-server-ahsaninkiad.vercel.app/sUsers?userEmail=${user.email}`)
         return res.json();
     })
 
     console.log(sUsers);
 
-    const url = `http://localhost:5000/sClasses?userEmail=${user.email}`;
+    const url = `https://photo-club-server-ahsaninkiad.vercel.app/sClasses?userEmail=${user.email}`;
 
     // tanstack query
     const { data: sClasses = [], refetch } = useQuery(['sClasses'], async () => {
@@ -30,7 +30,7 @@ const UserHome = () => {
     })
     setTotalSelectedClass(sClasses.length)
     setTotalClass(tabs.length);
-    const purl = `http://localhost:5000/mypayment?userEmail=${user.email}`;
+    const purl = `https://photo-club-server-ahsaninkiad.vercel.app/mypayment?userEmail=${user.email}`;
  // tanstack query
  const { data: pays = [], refetchu } = useQuery(['pays'], async () => {
     const res = await fetch(purl)

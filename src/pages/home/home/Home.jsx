@@ -16,14 +16,14 @@ const Home = () => {
     const [instabs, setInstabs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://photo-club-server-ahsaninkiad.vercel.app/classes')
             .then(res => res.json())
             .then(data => setTabs(data.sort((a, b) => b.total_enrolled_students - a.total_enrolled_students)))
 
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:5000/instructors')
+        fetch('https://photo-club-server-ahsaninkiad.vercel.app/instructors')
             .then(res => res.json())
             .then(data => setInstabs(data))
     }, [])
@@ -42,7 +42,7 @@ const Home = () => {
         }
 
         console.log(selectedClass);
-        fetch('http://localhost:5000/selectedclass', {
+        fetch('https://photo-club-server-ahsaninkiad.vercel.app/selectedclass', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

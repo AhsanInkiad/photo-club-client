@@ -5,7 +5,7 @@ import { AuthContext } from '../../../providers/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
 const EnrolledClasses = () => {
     const { user,  totalEnrolled, setTotalEnrolled } = useContext((AuthContext));
-    const url = `http://localhost:5000/mypayment?userEmail=${user.email}`;
+    const url = `https://photo-club-server-ahsaninkiad.vercel.app/mypayment?userEmail=${user.email}`;
 
     // tanstack query
     const { data: pays = [], refetch } = useQuery(['pays'], async () => {

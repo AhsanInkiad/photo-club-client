@@ -6,7 +6,7 @@ const MyClasses = () => {
     const { user } = useContext((AuthContext));
     const [data, setData] = useState([]);
 
-    const url = `http://localhost:5000/addClasses?insEmail=${user.email}`;
+    const url = `https://photo-club-server-ahsaninkiad.vercel.app/addClasses?insEmail=${user.email}`;
     useEffect(() => {
         fetch(url)
             .then(res => res.json())

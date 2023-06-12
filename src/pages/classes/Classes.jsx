@@ -14,7 +14,7 @@ const Classes = () => {
 
     // Loading all classes
     useEffect(() => {
-        fetch('http://localhost:5000/classes')
+        fetch('https://photo-club-server-ahsaninkiad.vercel.app/classes')
             .then(res => res.json())
             .then(data => setTabs(data))
     }, []);
@@ -37,7 +37,7 @@ const Classes = () => {
 
         // Creating instances in the database
 
-        fetch('http://localhost:5000/selectedclass', {
+        fetch('https://photo-club-server-ahsaninkiad.vercel.app/selectedclass', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

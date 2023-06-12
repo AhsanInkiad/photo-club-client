@@ -36,7 +36,7 @@ const AddClass = () => {
         }
 
         console.log(addedClass);
-        fetch('http://localhost:5000/addaclass', {
+        fetch('https://photo-club-server-ahsaninkiad.vercel.app/addaclass', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

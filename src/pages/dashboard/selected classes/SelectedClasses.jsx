@@ -15,7 +15,7 @@ const SelectedClasses = () => {
         setPaaycorseInsEmail } = useContext((AuthContext));
     const [data, setData] = useState([]);
     const [hoveredRow, setHoveredRow] = useState(null);
-    const url = `http://localhost:5000/sClasses?userEmail=${user.email}`;
+    const url = `https://photo-club-server-ahsaninkiad.vercel.app/sClasses?userEmail=${user.email}`;
 
     // tanstack query
     const { data: sClasses = [], refetch } = useQuery(['sClasses'], async () => {
@@ -46,7 +46,7 @@ const SelectedClasses = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/del/${id}`, {
+                fetch(`https://photo-club-server-ahsaninkiad.vercel.app/del/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
